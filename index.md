@@ -47,7 +47,7 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 {% endif %}
 
 <h4>This is the workshop template. Delete these lines and use it to customize your own website.
-If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in 
+If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in
 <a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
 and our administrator may contact you if we need any extra information.</h4>
 
@@ -195,7 +195,7 @@ and our administrator may contact you if we need any extra information.</h4>
 
 {% comment %} DO NOT EDIT SURVEY LINKS {% endcomment %}
 <p><em>Surveys</em></p>
-{% if page.carpentry == "swc" %} 
+{% if page.carpentry == "swc" %}
 <p>Please be sure to complete these surveys before and after the workshop.</p>
 <p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
@@ -327,7 +327,7 @@ and our administrator may contact you if we need any extra information.</h4>
             </li>
             {% comment %} Choosing the SSH executable {% endcomment %}
             <li>Click on "Next".</li>
-            {% comment %} Configuring the line ending conversions {% endcomment %}
+            {% comment %} Configuring the line ending conversións {% endcomment %}
             <li>
               <strong>
                 Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
@@ -364,7 +364,7 @@ and our administrator may contact you if we need any extra information.</h4>
     <div class="col-md-4">
       <h4 id="shell-macosx">macOS</h4>
       <p>
-        The default shell in all versions of macOS is Bash, so no
+        The default shell in all versións of macOS is Bash, so no
         need to install anything.  You access Bash from the Terminal
         (found in
         <code>/Applications/Utilities</code>).
@@ -386,57 +386,57 @@ and our administrator may contact you if we need any extra information.</h4>
   </div>
 </div> {% comment %} End of 'shell' section. {% endcomment %}
 
-<div id="git"> {% comment %} Start of 'Git' section. GitHub browser compatability
-           is given at https://help.github.com/articles/supported-browsers/{% endcomment %}
+<div id="git"> {% comment %} Start of 'Git' section. La compatibilidad de GitHub  
+           esta en https://help.github.com/articles/supported-browsers/{% endcomment %}
   <h3>Git</h3>
+
   <p>
-    Git is a version control system that lets you track who made changes
-    to what when and has options for easily updating a shared or public
-    version of your code
-    on <a href="https://github.com/">github.com</a>. You will need a
-    <a href="https://help.github.com/articles/supported-browsers/">supported</a>
-    web browser (current versions of Chrome, Firefox or Safari,
-    or Internet Explorer version 9 or above).
+    Git es un sistema de versión de control que permite hacer un seguimiento de
+    quien hiso que cambios, donde y cuando, tiene la opción de actualizar fácilmente
+    una versión publica o compartida de tu codigo en <a href="https://github.com/">github.com</a>.
+    Vas a neesitar un navegador web
+    <a href="https://help.github.com/articles/supported-browsers/">soportado</a>
+    (actualmente Chrome, Firefox, Safari, o Internet Explorer 9 para arriba)
   </p>
   <p>
-    You will need an account at <a href="https://github.com/">github.com</a>
-    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
-    you to create a GitHub account if you don't have one already.
-    Please consider what personal information you'd like to reveal. For
-    example, you may want to review these
-    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
-    for keeping your email address private</a> provided at GitHub.
+    Vas a necesitar una cuenta en <a href="https://github.com/">github.com</a>
+    para alguna partes de la lección de Git. Las cuentas basicas en GitHub son gratuitas.
+    Te incentivamos a crear una cuenta en GitHub si todavia no tenes una.
+    Por favor considera que información persional te gustaria hacer publica.
+    Por  ejemplo, por ahi te gustaria revisar algunas de estas
+    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instrucciones
+    para mantener tu dirección de email privada</a> escrita por GitHub.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="git-windows">Windows</h4>
       <p>
-        Git should be installed on your computer as part of your Bash
-        install (described above).
+        Git deberia estar instalado en tu computadora como parte
+        de tu instalacion de Bash (escrito mas abajo).
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-macosx">macOS</h4>
       <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>
       <p>
-        <strong>For OS X 10.9 and higher</strong>, install Git for Mac
-        by downloading and running the most recent "mavericks" installer from
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
-        After installing Git, there will not be anything in your <code>/Applications</code> folder,
-        as Git is a command line program.
-        <strong>For older versions of OS X (10.5-10.8)</strong> use the
-        most recent available installer labelled "snow-leopard"
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
+        <strong>Para OS X 10.9 y superiores</strong>, instala Git para Mac
+        ejecutando el instalador mas reciente de "mavericks", podes descargarlo
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">de esta lista</a>.
+        Después de instalar Git, no vas a ver nada en tu carpeta <code>/Applications/code> por que
+        Git es un programa de linea de comando.
+        <strong>Para versiónes mas antiguas de OS X (10.5-10.8)</strong>
+        Usa el instalador <a href="http://sourceforge.net/projects/git-osx-installer/files/"> disponible </a>
+        mas reciente de "snow-leopard".
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-linux">Linux</h4>
       <p>
-        If Git is not already available on your machine you can try to
-        install it via your distro's package manager. For Debian/Ubuntu run
-        <code>sudo apt-get install git</code> and for Fedora run
-        <code>sudo dnf install git</code>.
+        Si Git no esta ya en tu maquina podes tratar de instalarlo a través
+        de los repositorios de tu distribución. Para Debian/Ubuntu corre
+        <code>sudo apt-get install git</code> y para Fedora
+        <code>sudo dnf install git</code>
       </p>
     </div>
   </div>
@@ -531,17 +531,17 @@ and our administrator may contact you if we need any extra information.</h4>
 
     <p>
       Regardless of how you choose to install it,
-      <strong>please make sure you install Python version 3.x</strong>
+      <strong>please make sure you install Python versión 3.x</strong>
       (e.g., 3.6 is fine).
     </p>
 
     <p>
       We will teach Python using the <a href="https://jupyter.org/">Jupyter notebook</a>,
       a programming environment that runs in a web browser. For this to work you will need a reasonably
-      up-to-date browser. The current versions of the Chrome, Safari and
+      up-to-date browser. The current versións of the Chrome, Safari and
       Firefox browsers are all
       <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">supported</a>
-      (some older browsers, including Internet Explorer version 9
+      (some older browsers, including Internet Explorer versión 9
       and below, are not).
     </p>
 
@@ -627,9 +627,9 @@ and our administrator may contact you if we need any extra information.</h4>
         from <a href="http://cran.r-project.org/index.html">CRAN</a>.
         Also, please install the
         <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-        Note that if you have separate user and admin accounts, you should run the 
-        installers as administrator (right-click on .exe file and select "Run as 
-        administrator" instead of double-clicking). Otherwise problems may occur later, 
+        Note that if you have separate user and admin accounts, you should run the
+        installers as administrator (right-click on .exe file and select "Run as
+        administrator" instead of double-clicking). Otherwise problems may occur later,
         for example when installing R packages.
       </p>
     </div>
@@ -665,6 +665,12 @@ and our administrator may contact you if we need any extra information.</h4>
     SQL is a specialized programming language used with databases.  We
     use a simple database manager called
     <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
+  </p>
+
+  <p>
+    SQL es un lenguaje de programación usado en bases de datos.
+    Nosotras en nuestras lecciones usamos
+    <a href="http://www.sqlite.org/">SQLite</a>.
   </p>
 
   <div class="row">
