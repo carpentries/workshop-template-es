@@ -187,7 +187,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% comment %}
   CRONOGRAMA
 
-  Muestra el cronograma del taller. Edite los elementos y los tiempos de de la tabla para que coincidan con sus planes. Quizás también quiera cambiar 'Día 1' y 'Día 2' para que coincidan con las fechas o los días de la semana.
+  Muestra el cronograma del taller. Edite los elementos y los tiempos de la tabla para que coincidan con sus planes. Quizás también quiera cambiar 'Día 1' y 'Día 2' para que coincidan con las fechas o los días de la semana.
 {% endcomment %}
 <h2 id="schedule">Cronograma</h2>
 
@@ -222,7 +222,7 @@ and our administrator may contact you if we need any extra information.</h4>
       http://pad.software-carpentry.org/YYYY-MM-DD-site
 
   donde 'YYYY-MM-DD-site' es el identificador para su taller,
-  p.ej., '2018-06-10-esu'.
+  por ejemplo: '2018-06-10-esu'.
 {% endcomment %}
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
