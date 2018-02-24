@@ -1,40 +1,37 @@
 ---
-layout: workshop      # DON'T CHANGE THIS.
-carpentry: "FIXME"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
-venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "FIXME"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["FIXME"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["FIXME"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["fixme@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+layout: workshop      # NO CAMBIAR ESTO 
+carpentry: "FIXME"    # qué tipo de Carpentry (ya sea "lc", "dc" o "swc")
+venue: "FIXME"        # nombre breve del espacio donde se lleva adelante el taller, sin dirección (por ejemplo, "Universidad de Buenos Aires")
+address: "FIXME"      # dirección completa del espacio donde se realizará el taller (por ejemplo, "Aula 3, Av. Córdoba 1234, Buenos Aires, Argentina")
+country: "FIXME"      # código ISO del país, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "FIXME"     # código ISO del idioma, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_639-1)
+latlng: "FIXME"       # latitud y longitud del espacio en formato decimal (por ejemplo, "41.7901128,-87.6007318" - usar http://www.latlong.net/)
+humandate: "FIXME"    # fechas del taller en formato legible (por ejemplo, "Feb 17-18, 2020")
+humantime: "FIXME"    # hora del taller en formato legible (por ejemplo, "9:00 am - 4:30 pm")
+startdate: FIXME      # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
+enddate: FIXME        # fecha de finalización del taller en formato YYYY-MM-DD, por ejemplo 2015-01-02
+instructor: ["FIXME"] # lista de nombres de las instructoras separados por comas y entre corchetes, como ["Hedy Lamarr", "Ada Lovelace", "Madame Curie"]
+helper: ["FIXME"]     # lista de nombres de las **helpers** separados por comas y entre corchetes, como ["Carrie Fisher", "Frances Allen", "Margaret Hamilton"]
+email: ["fixme@example.org"]    # lista de direcciones de correo electrónico de contacto con la **host** ó **lead instructor**, separadas por comas y entre corchetes, como ["ada.lovelace@ejemplo.org", "carrie.fisher@ejemplo.org", "hedy.lamarr@example.org"]
+collaborative_notes:             # optional: URL de las notas colaborativas del taller, por ejemplo un Etherpad o documento de Google Docs 
+eventbrite:           # optional: clave alfanumérica de registro en Eventbrite, por ejemplo "1234567890AB" (si se está utilizando Eventbrite)
 ---
 
-{% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
+{% comment %} Ver en los comentarios que siguen las instrucciones sobre cómo editar secciones específicas de esta plantilla de taller {% endcomment %}
 
 {% comment %}
-  HEADER
+  ENCABEZADO
 
-  Edit the values in the block above to be appropriate for your workshop.
-  If the value is not 'true', 'false', 'null', or a number, please use
-  double quotation marks around the value, unless specified otherwise.
-  And run 'make workshop-check' *before* committing to make sure that changes are good.
+  Edita los valores en el bloque de arriba para tu taller.
+  Si el valor no es 'true', 'false', 'null', o un número, por favor usa
+  comillas dobles alrededor del valor, salvo que se especifique de otro modo.
+  Por último ejecuta 'make workshop-check' *antes* de comitear para asegurarte que los cambios estan bien.
 {% endcomment %}
 
 {% comment %}
   EVENTBRITE
 
-  This block includes the Eventbrite registration widget if
-  'eventbrite' has been set in the header.  You can delete it if you
-  are not using Eventbrite, or leave it in, since it will not be
-  displayed if the 'eventbrite' field in the header is not set.
+  Este bloque incluye el widget para registro en Eventbrite, en caso de que 'eventbrite' haya sido especificado en el encabezado. Puedes borrarlo si no estás usando Eventbrite, o dejarlo, ya que no se mostrará si el campo 'eventbrite' en el encabezado no fue especificado. 
 {% endcomment %}
 {% if page.eventbrite %}
 <iframe
@@ -46,18 +43,19 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 </iframe>
 {% endif %}
 
-<h4>This is the workshop template. Delete these lines and use it to customize your own website.
-If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in 
-<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
-and our administrator may contact you if we need any extra information.</h4>
+
+
+<h4>Esta es la plantilla de taller. Elimina éstas líneas y utilíza la plantilla para personalizar tu propio sitio web. Si estás desarrollando un taller auto-gestionado o aún no hiciste una solicitud de pedido de taller, por favor completa este <a href="{{site.amy_site}}/submit">formulario</a> para notificarnos y que nuestra administradora pueda contactarte si necesitamos información adicional.</h4>
+
+
 
 <h2 id="general">General Information</h2>
 
 {% comment %}
-  INTRODUCTION
+  INTRODUCCIÓN 
 
-  Edit the general explanatory paragraph below if you want to change
-  the pitch.
+  Edita el párrafo introductorio general debajo si quieres modificar la presentación.
+  
 {% endcomment %}
 {% if page.carpentry == "swc" %}
   {% include sc/intro.html %}
@@ -68,11 +66,10 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endif %}
 
 {% comment %}
-  AUDIENCE
+  PÚBLICO
 
-  Explain who your audience is.  (In particular, tell readers if the
-  workshop is only open to people from a particular institution.
-{% endcomment %}
+  Explica quién es tu público. (En particular, cuenta a los lectores si el taller esta abierto sólo a personas de una institución o grupo en particular).
+  {% endcomment %}
 {% if page.carpentry == "swc" %}
   {% include sc/who.html %}
 {% elsif page.carpentry == "dc" %}
@@ -82,47 +79,41 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endif %}
 
 {% comment %}
-  LOCATION
+  UBICACIÓN
 
-  This block displays the address and links to maps showing directions
-  if the latitude and longitude of the workshop have been set.  You
-  can use http://itouchmap.com/latlong.html to find the lat/long of an
-  address.
+  Este bloque muestra la dirección y enlaces a mapas con instrucciones para llegar, si la latitud y longitud fueron definidas. Puedes utilizar http://itouchmap.com/latlong.html para encontrar la lat/long de una dirección. 
 {% endcomment %}
 {% if page.latlng %}
 <p id="where">
-  <strong>Where:</strong>
+  <strong>Dónde:</strong>
   {{page.address}}.
-  Get directions with
+  Obtener direcciones con:
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
-  or
+  o
   <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
 </p>
 {% endif %}
 
 {% comment %}
-  DATE
+  FECHA
 
-  This block displays the date and links to Google Calendar.
+  Este bloque muestra la fecha y enlaces a Google Calendar.
 {% endcomment %}
 {% if page.humandate %}
 <p id="when">
-  <strong>When:</strong>
+  <strong>Cuándo:</strong>
   {{page.humandate}}.
   {% include workshop_calendar.html %}
 </p>
 {% endif %}
 
 {% comment %}
-  SPECIAL REQUIREMENTS
-
-  Modify the block below if there are any special requirements.
+  REQUERIMIENTOS ESPECIALES
+  
+  Modifica este bloque si hay algún requerimiento especial.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
-  on. They should have a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
+  <strong>Requerimientos:</strong> Las asistentes deben traer una computadora portátil con sistema operativo Mac, Linux o Windows (no tablet, Chromebook, etc.), que tenga permisos de administradora habilitados. Deben tener algunos paquetes de software específicos instalados (listados <a href="#setup">aquí</a>). También es requerido que respeten el <a href="{{site.swc_site}}/conduct.html">Código de Conducta</a> de
   {% if page.carpentry == "swc" %}
   Software Carpentry's
   {% elsif page.carpentry == "dc" %}
@@ -130,45 +121,37 @@ and our administrator may contact you if we need any extra information.</h4>
   {% elsif page.carpentry == "lc" %}
   Library Carpentry's
   {% endif %}
-  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+  
 </p>
 
 {% comment %}
-  ACCESSIBILITY
+  ACCESIBILIDAD
 
-  Modify the block below if there are any barriers to accessibility or
-  special instructions.
+  Modifica este bloque si existen barreras de accesibilidad o instrucciones especiales.
 {% endcomment %}
 <p id="accessibility">
-  <strong>Accessibility:</strong> We are committed to making this workshop
-  accessible to everybody.
-  The workshop organizers have checked that:
+  <strong>Accesibilidad:</strong> Estamos comprometidas a hacer que este taller sea accesible para todas. Las organizadoras comprobaron que: 
 </p>
 <ul>
-  <li>The room is wheelchair / scooter accessible.</li>
-  <li>Accessible restrooms are available.</li>
+  <li>El salón es accesible para silla de ruedas o similar</li>
+  <li>Baños accesibles a disposición</li>
 </ul>
 <p>
-  Materials will be provided in advance of the workshop and
-  large-print handouts are available if needed by notifying the
-  organizers in advance.  If we can help making learning easier for
-  you (e.g. sign-language interpreters, lactation facilities) please
-  get in touch (using contact details below) and we will
-  attempt to provide them.
+  Los materiales se entregaran antes del taller, también se encuentra disponible material impreso si se pide a los organizadores con anticipación. Si podemos ayudar a facilitar el aprendizaje (por ejemplo, con intérpretes de lenguaje de señas, o instalaciones para lactancia) por favor contáctanos (utilizando los detalles de contacto listados debajo) e intentaremos proveerlos.
 </p>
 
 {% comment %}
-  CONTACT EMAIL ADDRESS
+  DIRECCIONES DE CORREO ELECTRÓNICO DE CONTACTO
 
-  Display the contact email address set in the configuration file.
+  Muestra los correos electrónicos de contacto definidos en el archivo de configuración.
 {% endcomment %}
 <p id="contact">
-  <strong>Contact</strong>:
-  Please email
+  <strong>Contacto</strong>:
+  Por favor escribe a
   {% if page.email %}
     {% for email in page.email %}
       {% if forloop.last and page.email.size > 1 %}
-        or
+        o
       {% else %}
         {% unless forloop.first %}
         ,
@@ -177,9 +160,9 @@ and our administrator may contact you if we need any extra information.</h4>
       <a href='mailto:{{email}}'>{{email}}</a>
     {% endfor %}
   {% else %}
-    to-be-announced
+    a ser anunciado
   {% endif %}
-  for more information.
+  para más información.
 </p>
 
 <hr/>
@@ -187,18 +170,20 @@ and our administrator may contact you if we need any extra information.</h4>
 {% comment %}
   SCHEDULE
 
-  Show the workshop's schedule.  Edit the items and times in the table
-  to match your plans.  You may also want to change 'Day 1' and 'Day
-  2' to be actual dates or days of the week.
-{% endcomment %}
-<h2 id="schedule">Schedule</h2>
 
-{% comment %} DO NOT EDIT SURVEY LINKS {% endcomment %}
-<p><em>Surveys</em></p>
-{% if page.carpentry == "swc" %} 
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
+
+ Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para ajustarlos a tu planificación. Puede que quieras modificar 'Día 1' y 'Dia 2' para mostrar fechas concretas o días de la semana.
+
+{% endcomment %}
+<h2 id="schedule">Cronograma</h2>
+
+{% comment %} NO EDITAR LOS ENLACES A LAS ENCUESTAS {% endcomment %}
+<p><em>Encuestas</em></p>
+{% if page.carpentry == "swc" %}
+<p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
+<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
+<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
+
 {% elsif page.carpentry == "dc" %}
   <p>Please be sure to complete these surveys before and after the workshop.</p>
 <p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
@@ -235,23 +220,23 @@ and our administrator may contact you if we need any extra information.</h4>
 <hr/>
 
 {% comment %}
-  SYLLABUS
+  CURRICULA
 
-  Show what topics will be covered.
+  En inglés, syllabus. Muestra que tópicos van a ser cubiertos.
 
-  1. If your workshop is R rather than Python, remove the comment
-     around that section and put a comment around the Python section.
-  2. Some workshops will delete SQL.
-  3. Please make sure the list of topics is synchronized with what you
-     intend to teach.
-  4. You may need to move the div's with class="col-md-6" around inside
-     the div's with class="row" to balance the multi-column layout.
+  1. Si tu taller es sobre R antes que Python, remove el comentario
+     alrededor de esa sección y pon un comentario alrededor de la sección Python.
+  2. Algunos talleres van a remover SQL.
+  3. Por favor asegúrate que la lista de tópicos está sincronizada con lo que
+     pretendes enseñar.
+  4. Podría ser que necesites mover los campos div con class="col-md-6" alrededor
+     dentro de los div con class="row" para balancear el diseño multi-columnar.
 
-  This is one of the places where people frequently make mistakes, so
-  please preview your site before committing, and make sure to run
-  'tools/check' as well.
+  Este es uno de los lugares donde la gente frecuentemente comete errores, así que
+  por favor observa la previsualización del sitio antes de comitear, y asegúrate
+  de ejecutar también 'tools/check'.
 {% endcomment %}
-<h2 id="syllabus">Syllabus</h2>
+<h2 id="syllabus">Currícula</h2>
 
 {% if page.carpentry == "swc" %}
   {% include sc/syllabus.html %}
@@ -264,15 +249,11 @@ and our administrator may contact you if we need any extra information.</h4>
 <hr/>
 
 {% comment %}
-  SETUP
-
-  Delete irrelevant sections from the setup instructions.  Each
-  section is inside a 'div' without any classes to make the beginning
-  and end easier to find.
-
-  This is the other place where people frequently make mistakes, so
-  please preview your site before committing, and make sure to run
-  'tools/check' as well.
+  CONFIGURACIÓN
+ 
+  Borra las secciones irrelevantes de las instrucciones de configuración. Cada sección esta dentro de un 'div' que no contiene clases para que el comienzo y el final sean más fáciles de encontrar.
+  Este es otro lugar en donde las personas cometen errores de forma mas frecuente, por favor previsualiza tu sitio antes de commitear y además asegurate de ejecutar 'tools/check'.
+  
 {% endcomment %}
 
 <h2 id="setup">Setup</h2>
@@ -327,7 +308,7 @@ and our administrator may contact you if we need any extra information.</h4>
             </li>
             {% comment %} Choosing the SSH executable {% endcomment %}
             <li>Click on "Next".</li>
-            {% comment %} Configuring the line ending conversions {% endcomment %}
+            {% comment %} Configuring the line ending conversións {% endcomment %}
             <li>
               <strong>
                 Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
@@ -364,7 +345,7 @@ and our administrator may contact you if we need any extra information.</h4>
     <div class="col-md-4">
       <h4 id="shell-macosx">macOS</h4>
       <p>
-        The default shell in all versions of macOS is Bash, so no
+        The default shell in all versións of macOS is Bash, so no
         need to install anything.  You access Bash from the Terminal
         (found in
         <code>/Applications/Utilities</code>).
@@ -386,57 +367,57 @@ and our administrator may contact you if we need any extra information.</h4>
   </div>
 </div> {% comment %} End of 'shell' section. {% endcomment %}
 
-<div id="git"> {% comment %} Start of 'Git' section. GitHub browser compatability
-           is given at https://help.github.com/articles/supported-browsers/{% endcomment %}
+<div id="git"> {% comment %} Start of 'Git' section. La compatibilidad de GitHub  
+           esta en https://help.github.com/articles/supported-browsers/{% endcomment %}
   <h3>Git</h3>
+
   <p>
-    Git is a version control system that lets you track who made changes
-    to what when and has options for easily updating a shared or public
-    version of your code
-    on <a href="https://github.com/">github.com</a>. You will need a
-    <a href="https://help.github.com/articles/supported-browsers/">supported</a>
-    web browser (current versions of Chrome, Firefox or Safari,
-    or Internet Explorer version 9 or above).
+    Git es un sistema de versión de control que permite hacer un seguimiento de
+    quien hiso que cambios, donde y cuando, tiene la opción de actualizar fácilmente
+    una versión publica o compartida de tu codigo en <a href="https://github.com/">github.com</a>.
+    Vas a neesitar un navegador web
+    <a href="https://help.github.com/articles/supported-browsers/">soportado</a>
+    (actualmente Chrome, Firefox, Safari, o Internet Explorer 9 para arriba)
   </p>
   <p>
-    You will need an account at <a href="https://github.com/">github.com</a>
-    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
-    you to create a GitHub account if you don't have one already.
-    Please consider what personal information you'd like to reveal. For
-    example, you may want to review these
-    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
-    for keeping your email address private</a> provided at GitHub.
+    Vas a necesitar una cuenta en <a href="https://github.com/">github.com</a>
+    para alguna partes de la lección de Git. Las cuentas basicas en GitHub son gratuitas.
+    Te incentivamos a crear una cuenta en GitHub si todavia no tenes una.
+    Por favor considera que información persional te gustaria hacer publica.
+    Por  ejemplo, por ahi te gustaria revisar algunas de estas
+    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instrucciones
+    para mantener tu dirección de email privada</a> escrita por GitHub.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="git-windows">Windows</h4>
       <p>
-        Git should be installed on your computer as part of your Bash
-        install (described above).
+        Git deberia estar instalado en tu computadora como parte
+        de tu instalacion de Bash (escrito mas abajo).
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-macosx">macOS</h4>
       <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>
       <p>
-        <strong>For OS X 10.9 and higher</strong>, install Git for Mac
-        by downloading and running the most recent "mavericks" installer from
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
-        After installing Git, there will not be anything in your <code>/Applications</code> folder,
-        as Git is a command line program.
-        <strong>For older versions of OS X (10.5-10.8)</strong> use the
-        most recent available installer labelled "snow-leopard"
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
+        <strong>Para OS X 10.9 y superiores</strong>, instala Git para Mac
+        ejecutando el instalador mas reciente de "mavericks", podes descargarlo
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">de esta lista</a>.
+        Después de instalar Git, no vas a ver nada en tu carpeta <code>/Applications/code> por que
+        Git es un programa de linea de comando.
+        <strong>Para versiónes mas antiguas de OS X (10.5-10.8)</strong>
+        Usa el instalador <a href="http://sourceforge.net/projects/git-osx-installer/files/"> disponible </a>
+        mas reciente de "snow-leopard".
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-linux">Linux</h4>
       <p>
-        If Git is not already available on your machine you can try to
-        install it via your distro's package manager. For Debian/Ubuntu run
-        <code>sudo apt-get install git</code> and for Fedora run
-        <code>sudo dnf install git</code>.
+        Si Git no esta ya en tu maquina podes tratar de instalarlo a través
+        de los repositorios de tu distribución. Para Debian/Ubuntu corre
+        <code>sudo apt-get install git</code> y para Fedora
+        <code>sudo dnf install git</code>
       </p>
     </div>
   </div>
@@ -536,17 +517,17 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
 
     <p>
       Regardless of how you choose to install it,
-      <strong>please make sure you install Python version 3.x</strong>
+      <strong>please make sure you install Python versión 3.x</strong>
       (e.g., 3.6 is fine).
     </p>
 
     <p>
       We will teach Python using the <a href="https://jupyter.org/">Jupyter notebook</a>,
       a programming environment that runs in a web browser. For this to work you will need a reasonably
-      up-to-date browser. The current versions of the Chrome, Safari and
+      up-to-date browser. The current versións of the Chrome, Safari and
       Firefox browsers are all
       <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">supported</a>
-      (some older browsers, including Internet Explorer version 9
+      (some older browsers, including Internet Explorer versión 9
       and below, are not).
     </p>
 
@@ -616,48 +597,54 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
   <h3>R</h3>
 
   <p>
-    <a href="http://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
+    <a href="http://www.r-project.org">R</a> es un lenguaje de programación 
+    especialmente poderoso para exploración de datos, visualización y  
+    análisis estadístico. Para trabajar con R, usamos
     <a href="http://www.rstudio.com/">RStudio</a>.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="r-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
+      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial en inglés </a>
       <p>
-        Install R by downloading and running
-        <a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-        from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-        Note that if you have separate user and admin accounts, you should run the 
-        installers as administrator (right-click on .exe file and select "Run as 
-        administrator" instead of double-clicking). Otherwise problems may occur later, 
-        for example when installing R packages.
+
+
+
+        Instala R descargando e instalando
+        <a href="http://cran.r-project.org/bin/windows/base/release.htm">este archivo .exe </a>
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
+        Además, instala el entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE) 
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
+        Ten en cuenta que si tienes cuentas separadas de usuario y administrador,
+	debes correr los instaladores como administrador (haz click derecho en el 
+        archivo .exe y selecciona "Ejecutar como administrador" en lugar de hacer doble click)  
+        De lo contrario pueden ocurrir problemas, por ejemplo, cuando instales paquetes de R.
+
+
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="r-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
+      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial en inglés</a>
       <p>
-        Install R by downloading and running
-        <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-        from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+        Instala R descargando e instalando
+        <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">este archivo .pkg </a>
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
+        Además, instala el entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE) 
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="r-linux">Linux</h4>
       <p>
-        You can download the binary files for your distribution
-        from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
-        you can use your package manager (e.g. for Debian/Ubuntu
-        run <code>sudo apt-get install r-base</code> and for Fedora run
-        <code>sudo dnf install R</code>).  Also, please install the
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+        Puedes descargar los archivos binarios para tu distribución
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>. O
+        puedes usar tu administrador de paquetes (por ejemplo: para Debian/Ubuntu
+        corre <code>sudo apt-get install r-base</code> y para Fedora corre
+        <code>sudo dnf install R</code>).  Además, por favor instala el entorno de desarrollo integrado, 
+	en inglés Integrated Development Environment (IDE) 
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
       </p>
     </div>
   </div>
@@ -670,6 +657,12 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
     SQL is a specialized programming language used with databases.  We
     use a simple database manager called
     <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
+  </p>
+
+  <p>
+    SQL es un lenguaje de programación usado en bases de datos.
+    Nosotras en nuestras lecciones usamos
+    <a href="http://www.sqlite.org/">SQLite</a>.
   </p>
 
   <div class="row">
@@ -758,25 +751,25 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
 
 {% comment %}
 <div id="vm">
-  <h3>Virtual Machine</h3>
+  <h3>Máquina Virtual</h3>
 
   <p>
-    Some instructors prefer to have learners use a virtual machine (VM)
-    rather than install software on their own computers.  If your
-    instructors have chosen to do this, please:
+      Algunos instructores prefieren que los alumnos utilicen una máquina virtual
+      en lugar de instalar software en sus propias computadoras. Si tus
+      instructores han elegido hacer esto, por favor: 
   </p>
   <ol>
     <li>
-      Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
+      Instalar <a href="https://www.virtualbox.org/">VirtualBox</a>.
     </li>
     <li>
-      Download our <a href="{{site.swc_vm}}">VM image</a>.
-      <strong>Warning:</strong> this file is 1.7 GByte, so please
-      download it <em>before</em> coming to your workshop.
+      Descargue nuestra <a href="{{site.swc_vm}}">imagen de máquina virtual</a>.
+      <strong>Advertencia:</strong> este archivo pesa 1.7 GByte, entonces por favor
+      descárguelo <em>antes</em> de venir al taller.
     </li>
     <li>
-      Load the VM into VirtualBox by selecting "Import Appliance" and
-      loading the <code>.ova</code> file.
+      Cargue la máquina virtual en VirtualBox seleccionando "Importar dispositivo" 
+      y cargando el archivo <code>.ova</code> .
     </li>
   </ol>
 </div>
