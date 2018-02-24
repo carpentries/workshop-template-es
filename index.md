@@ -113,7 +113,9 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
   Modifica este bloque si hay algún requerimiento especial.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requerimientos:</strong> Las asistentes deben traer una computadora portátil con sistema operativo Mac, Linux o Windows (no tablet, Chromebook, etc.), que tenga permisos de administradora habilitados. Deben tener algunos paquetes de software específicos instalados (listados <a href="#setup">aquí</a>). También es requerido que respeten el <a href="{{site.swc_site}}/conduct.html">Código de Conducta</a> de
+  <strong>Requerimientos:</strong> Las asistentes deben traer una computadora portátil con sistema operativo Mac, Linux o Windows (no tablet, Chromebook, etc.), que tenga permisos de administradora habilitados. Deben tener algunos paquetes de software específicos instalados (listados <a href="#setup">aquí</a>). 
+	
+También es requerido que respeten el 
   {% if page.carpentry == "swc" %}
   Software Carpentry's
   {% elsif page.carpentry == "dc" %}
@@ -121,8 +123,9 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
   {% elsif page.carpentry == "lc" %}
   Library Carpentry's
   {% endif %}
-  
+  <a href="{{site.swc_site}}/conduct.html">Código de Conducta</a>. 
 </p>
+
 
 {% comment %}
   ACCESIBILIDAD
