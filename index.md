@@ -758,25 +758,25 @@ and our administrator may contact you if we need any extra information.</h4>
 
 {% comment %}
 <div id="vm">
-  <h3>Virtual Machine</h3>
+  <h3>Máquina Virtual</h3>
 
   <p>
-    Some instructors prefer to have learners use a virtual machine (VM)
-    rather than install software on their own computers.  If your
-    instructors have chosen to do this, please:
+      Algunos instructores prefieren que los alumnos utilicen una máquina virtual
+      en lugar de instalar software en sus propias computadoras. Si tus
+      instructores han elegido hacer esto, por favor: 
   </p>
   <ol>
     <li>
-      Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
+      Instalar <a href="https://www.virtualbox.org/">VirtualBox</a>.
     </li>
     <li>
-      Download our <a href="{{site.swc_vm}}">VM image</a>.
-      <strong>Warning:</strong> this file is 1.7 GByte, so please
-      download it <em>before</em> coming to your workshop.
+      Descargue nuestra <a href="{{site.swc_vm}}">imagen de máquina virtual</a>.
+      <strong>Advertencia:</strong> este archivo pesa 1.7 GByte, entonces por favor
+      descárguelo <em>antes</em> de venir al taller.
     </li>
     <li>
-      Load the VM into VirtualBox by selecting "Import Appliance" and
-      loading the <code>.ova</code> file.
+      Cargue la máquina virtual en VirtualBox seleccionando "Importar dispositivo" 
+      y cargando el archivo <code>.ova</code> .
     </li>
   </ol>
 </div>
