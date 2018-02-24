@@ -264,15 +264,11 @@ and our administrator may contact you if we need any extra information.</h4>
 <hr/>
 
 {% comment %}
-  SETUP
-
-  Delete irrelevant sections from the setup instructions.  Each
-  section is inside a 'div' without any classes to make the beginning
-  and end easier to find.
-
-  This is the other place where people frequently make mistakes, so
-  please preview your site before committing, and make sure to run
-  'tools/check' as well.
+  SETUP  
+ 
+  Borra las secciones irrelevantes de las instrucciones de configuración. Cada sección esta dentro de un 'div' que no contiene clases para que el comienzo y el final sean más fáciles de encontrar.
+  Este es otro lugar en donde las personas cometen errores de forma mas frecuente, por favor previsualiza tu sitio antes de commitear y además asegurate de ejecutar 'tools/check'.
+  
 {% endcomment %}
 
 <h2 id="setup">Setup</h2>
