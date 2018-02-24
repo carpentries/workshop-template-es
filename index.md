@@ -756,7 +756,7 @@ and our administrator may contact you if we need any extra information.</h4>
   <h3>Máquina Virtual</h3>
 
   <p>
-      Algunos instructores prefieren que los alumnos utilicen una máquina virtual (VM)
+      Algunos instructores prefieren que los alumnos utilicen una máquina virtual
       en lugar de instalar software en sus propias computadoras. Si tus
       instructores han elegido hacer esto, por favor: 
   </p>
@@ -765,7 +765,7 @@ and our administrator may contact you if we need any extra information.</h4>
       Instalar <a href="https://www.virtualbox.org/">VirtualBox</a>.
     </li>
     <li>
-      Descargue nuestra <a href="{{site.swc_vm}}">VM imagen</a>.
+      Descargue nuestra <a href="{{site.swc_vm}}">imagen de máquina virtual</a>.
       <strong>Advertencia:</strong> este archivo pesa 1.7 GByte, entonces por favor
       descárguelo <em>antes</em> de venir al taller.
     </li>
