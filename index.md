@@ -47,7 +47,7 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 {% endif %}
 
 <h4>This is the workshop template. Delete these lines and use it to customize your own website.
-If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in 
+If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in
 <a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
 and our administrator may contact you if we need any extra information.</h4>
 
@@ -185,26 +185,24 @@ and our administrator may contact you if we need any extra information.</h4>
 <hr/>
 
 {% comment %}
-  SCHEDULE
+  CRONOGRAMA
 
-  Show the workshop's schedule.  Edit the items and times in the table
-  to match your plans.  You may also want to change 'Day 1' and 'Day
-  2' to be actual dates or days of the week.
+  Muestra el cronograma del taller. Edite los elementos y los tiempos de la tabla para que coincidan con sus planes. Quizás también quiera cambiar 'Día 1' y 'Día 2' para que coincidan con las fechas o los días de la semana.
 {% endcomment %}
-<h2 id="schedule">Schedule</h2>
+<h2 id="schedule">Cronograma</h2>
 
-{% comment %} DO NOT EDIT SURVEY LINKS {% endcomment %}
-<p><em>Surveys</em></p>
-{% if page.carpentry == "swc" %} 
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
+{% comment %} NO EDITAR LOS ENLACES A LAS ENCUESTAS {% endcomment %}
+<p><em>Encuestas</em></p>
+{% if page.carpentry == "swc" %}
+<p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
+<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
+<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
 {% elsif page.carpentry == "dc" %}
-  <p>Please be sure to complete these surveys before and after the workshop.</p>
-<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
+  <p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
+<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
+<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
 {% elsif page.carpentry == "lc" %}
-<p>Ask your instructor about pre- and post-workshop Survey details.</p>
+<p>Pregunta a tu instructor por los detalles de las encuestas pre- y post-taller.</p>
 {% endif %}
 
 
@@ -217,18 +215,18 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endif %}
 
 {% comment %}
-  Collaborative Notes
+  Notas colaborativas
 
-  If you want to use an Etherpad, go to
+  Si quiere usar un Etherpad, puede ir a
 
       http://pad.software-carpentry.org/YYYY-MM-DD-site
 
-  where 'YYYY-MM-DD-site' is the identifier for your workshop,
-  e.g., '2015-06-10-esu'.
+  donde 'YYYY-MM-DD-site' es el identificador para su taller,
+  por ejemplo: '2018-06-10-esu'.
 {% endcomment %}
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
-  We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
+  Usaremos este <a href="{{page.collaborative_notes}}">documento colaborativo</a> para conversar, tomar notas y compartir URLs y líneas de código.
 </p>
 {% endif %}
 
@@ -622,6 +620,7 @@ and our administrator may contact you if we need any extra information.</h4>
       <h4 id="r-windows">Windows</h4>
       <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial en inglés </a>
       <p>
+
         Instala R descargando e instalando
         <a href="http://cran.r-project.org/bin/windows/base/release.htm">este archivo .exe </a>
         desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
