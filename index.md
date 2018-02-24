@@ -1,23 +1,23 @@
 ---
-layout: workshop      # DON'T CHANGE THIS.
-carpentry: "FIXME"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
-venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "FIXME"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["FIXME"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["FIXME"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["fixme@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+layout: workshop      # NO CAMBIAR ESTO 
+carpentry: "FIXME"    # qué tipo de Carpentry (ya sea "lc", "dc" o "swc")
+venue: "FIXME"        # nombre breve del espacio donde se lleva adelante el taller, sin dirección (por ejemplo, "Universidad de Buenos Aires")
+address: "FIXME"      # dirección completa del espacio donde se realizará el taller (por ejemplo, "Aula 3, Av. Córdoba 1234, Buenos Aires, Argentina")
+country: "FIXME"      # código ISO del país, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "FIXME"     # código ISO del idioma, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_639-1)
+latlng: "FIXME"       # latitud y longitud del espacio en formato decimal (por ejemplo, "41.7901128,-87.6007318" - usar http://www.latlong.net/)
+humandate: "FIXME"    # fechas del taller en formato legible (por ejemplo, "Feb 17-18, 2020")
+humantime: "FIXME"    # hora del taller en formato legible (por ejemplo, "9:00 am - 4:30 pm")
+startdate: FIXME      # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
+enddate: FIXME        # fecha de finalización del taller en formato YYYY-MM-DD, por ejemplo 2015-01-02
+instructor: ["FIXME"] # lista de nombres de las instructoras separados por comas y entre corchetes, como ["Hedy Lamarr", "Ada Lovelace", "Madame Curie"]
+helper: ["FIXME"]     # lista de nombres de las **helpers** separados por comas y entre corchetes, como ["Carrie Fisher", "Frances Allen", "Margaret Hamilton"]
+email: ["fixme@example.org"]    # lista de direcciones de correo electrónico de contacto con la **host** ó **lead instructor**, separadas por comas y entre corchetes, como ["ada.lovelace@ejemplo.org", "carrie.fisher@ejemplo.org", "hedy.lamarr@example.org"]
+collaborative_notes:             # optional: URL de las notas colaborativas del taller, por ejemplo un Etherpad o documento de Google Docs 
+eventbrite:           # optional: clave alfanumérica de registro en Eventbrite, por ejemplo "1234567890AB" (si se está utilizando Eventbrite)
 ---
 
-{% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
+{% comment %} Ver en los comentarios que siguen las instrucciones sobre cómo editar secciones específicas de esta plantilla de taller {% endcomment %}
 
 {% comment %}
   ENCABEZADO
@@ -31,10 +31,7 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 {% comment %}
   EVENTBRITE
 
-  This block includes the Eventbrite registration widget if
-  'eventbrite' has been set in the header.  You can delete it if you
-  are not using Eventbrite, or leave it in, since it will not be
-  displayed if the 'eventbrite' field in the header is not set.
+  Este bloque incluye el widget para registro en Eventbrite, en caso de que 'eventbrite' haya sido especificado en el encabezado. Puedes borrarlo si no estás usando Eventbrite, o dejarlo, ya que no se mostrará si el campo 'eventbrite' en el encabezado no fue especificado. 
 {% endcomment %}
 {% if page.eventbrite %}
 <iframe
@@ -46,18 +43,17 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 </iframe>
 {% endif %}
 
-<h4>This is the workshop template. Delete these lines and use it to customize your own website.
-If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in
-<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
-and our administrator may contact you if we need any extra information.</h4>
+
+<h4>Esta es la plantilla de taller. Elimina éstas líneas y utilíza la plantilla para personalizar tu propio sitio web. Si estás desarrollando un taller auto-gestionado o aún no hiciste una solicitud de pedido de taller, por favor completa este <a href="{{site.amy_site}}/submit">formulario</a> para notificarnos y que nuestra administradora pueda contactarte si necesitamos información adicional.</h4>
+
 
 <h2 id="general">General Information</h2>
 
 {% comment %}
-  INTRODUCTION
+  INTRODUCCIÓN 
 
-  Edit the general explanatory paragraph below if you want to change
-  the pitch.
+  Edita el párrafo introductorio general debajo si quieres modificar la presentación.
+  
 {% endcomment %}
 {% if page.carpentry == "swc" %}
   {% include sc/intro.html %}
@@ -68,11 +64,10 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endif %}
 
 {% comment %}
-  AUDIENCE
+  PÚBLICO
 
-  Explain who your audience is.  (In particular, tell readers if the
-  workshop is only open to people from a particular institution.
-{% endcomment %}
+  Explica quién es tu público. (En particular, cuenta a los lectores si el taller esta abierto sólo a personas de una institución o grupo en particular).
+  {% endcomment %}
 {% if page.carpentry == "swc" %}
   {% include sc/who.html %}
 {% elsif page.carpentry == "dc" %}
@@ -82,47 +77,41 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endif %}
 
 {% comment %}
-  LOCATION
+  UBICACIÓN
 
-  This block displays the address and links to maps showing directions
-  if the latitude and longitude of the workshop have been set.  You
-  can use http://itouchmap.com/latlong.html to find the lat/long of an
-  address.
+  Este bloque muestra la dirección y enlaces a mapas con instrucciones para llegar, si la latitud y longitud fueron definidas. Puedes utilizar http://itouchmap.com/latlong.html para encontrar la lat/long de una dirección. 
 {% endcomment %}
 {% if page.latlng %}
 <p id="where">
-  <strong>Where:</strong>
+  <strong>Dónde:</strong>
   {{page.address}}.
-  Get directions with
+  Obtener direcciones con:
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
-  or
+  o
   <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
 </p>
 {% endif %}
 
 {% comment %}
-  DATE
+  FECHA
 
-  This block displays the date and links to Google Calendar.
+  Este bloque muestra la fecha y enlaces a Google Calendar.
 {% endcomment %}
 {% if page.humandate %}
 <p id="when">
-  <strong>When:</strong>
+  <strong>Cuándo:</strong>
   {{page.humandate}}.
   {% include workshop_calendar.html %}
 </p>
 {% endif %}
 
 {% comment %}
-  SPECIAL REQUIREMENTS
-
-  Modify the block below if there are any special requirements.
+  REQUERIMIENTOS ESPECIALES
+  
+  Modifica este bloque si hay algún requerimiento especial.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
-  on. They should have a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
+  <strong>Requerimientos:</strong> Las asistentes deben traer una computadora portátil con sistema operativo Mac, Linux o Windows (no tablet, Chromebook, etc.), que tenga permisos de administradora habilitados. Deben tener algunos paquetes de software específicos instalados (listados <a href="#setup">aquí</a>). También es requerido que respeten el <a href="{{site.swc_site}}/conduct.html">Código de Conducta</a> de
   {% if page.carpentry == "swc" %}
   Software Carpentry's
   {% elsif page.carpentry == "dc" %}
@@ -130,45 +119,37 @@ and our administrator may contact you if we need any extra information.</h4>
   {% elsif page.carpentry == "lc" %}
   Library Carpentry's
   {% endif %}
-  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+  
 </p>
 
 {% comment %}
-  ACCESSIBILITY
+  ACCESIBILIDAD
 
-  Modify the block below if there are any barriers to accessibility or
-  special instructions.
+  Modifica este bloque si existen barreras de accesibilidad o instrucciones especiales.
 {% endcomment %}
 <p id="accessibility">
-  <strong>Accessibility:</strong> We are committed to making this workshop
-  accessible to everybody.
-  The workshop organizers have checked that:
+  <strong>Accesibilidad:</strong> Estamos comprometidas a hacer que este taller sea accesible para todas. Las organizadoras comprobaron que: 
 </p>
 <ul>
-  <li>The room is wheelchair / scooter accessible.</li>
-  <li>Accessible restrooms are available.</li>
+  <li>El salón es accesible para silla de ruedas o similar</li>
+  <li>Baños accesibles a disposición</li>
 </ul>
 <p>
-  Materials will be provided in advance of the workshop and
-  large-print handouts are available if needed by notifying the
-  organizers in advance.  If we can help making learning easier for
-  you (e.g. sign-language interpreters, lactation facilities) please
-  get in touch (using contact details below) and we will
-  attempt to provide them.
+  Los materiales se entregaran antes del taller, también se encuentra disponible material impreso si se pide a los organizadores con anticipación. Si podemos ayudar a facilitar el aprendizaje (por ejemplo, con intérpretes de lenguaje de señas, o instalaciones para lactancia) por favor contáctanos (utilizando los detalles de contacto listados debajo) e intentaremos proveerlos.
 </p>
 
 {% comment %}
-  CONTACT EMAIL ADDRESS
+  DIRECCIONES DE CORREO ELECTRÓNICO DE CONTACTO
 
-  Display the contact email address set in the configuration file.
+  Muestra los correos electrónicos de contacto definidos en el archivo de configuración.
 {% endcomment %}
 <p id="contact">
-  <strong>Contact</strong>:
-  Please email
+  <strong>Contacto</strong>:
+  Por favor escribe a
   {% if page.email %}
     {% for email in page.email %}
       {% if forloop.last and page.email.size > 1 %}
-        or
+        o
       {% else %}
         {% unless forloop.first %}
         ,
@@ -177,9 +158,9 @@ and our administrator may contact you if we need any extra information.</h4>
       <a href='mailto:{{email}}'>{{email}}</a>
     {% endfor %}
   {% else %}
-    to-be-announced
+    a ser anunciado
   {% endif %}
-  for more information.
+  para más información.
 </p>
 
 <hr/>
@@ -187,7 +168,9 @@ and our administrator may contact you if we need any extra information.</h4>
 {% comment %}
   CRONOGRAMA
 
-  Muestra el cronograma del taller. Edite los elementos y los tiempos de la tabla para que coincidan con sus planes. Quizás también quiera cambiar 'Día 1' y 'Día 2' para que coincidan con las fechas o los días de la semana.
+
+ Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para ajustarlos a tu planificación. Puede que quieras modificar 'Día 1' y 'Dia 2' para mostrar fechas concretas o días de la semana.
+
 {% endcomment %}
 <h2 id="schedule">Cronograma</h2>
 
