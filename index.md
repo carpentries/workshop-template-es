@@ -47,7 +47,7 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 {% endif %}
 
 <h4>This is the workshop template. Delete these lines and use it to customize your own website.
-If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in
+If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in 
 <a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
 and our administrator may contact you if we need any extra information.</h4>
 
@@ -185,24 +185,26 @@ and our administrator may contact you if we need any extra information.</h4>
 <hr/>
 
 {% comment %}
-  CRONOGRAMA
+  SCHEDULE
 
-  Muestra el cronograma del taller. Edite los elementos y los tiempos de la tabla para que coincidan con sus planes. Quizás también quiera cambiar 'Día 1' y 'Día 2' para que coincidan con las fechas o los días de la semana.
+  Show the workshop's schedule.  Edit the items and times in the table
+  to match your plans.  You may also want to change 'Day 1' and 'Day
+  2' to be actual dates or days of the week.
 {% endcomment %}
-<h2 id="schedule">Cronograma</h2>
+<h2 id="schedule">Schedule</h2>
 
-{% comment %} NO EDITAR LOS ENLACES A LAS ENCUESTAS {% endcomment %}
-<p><em>Encuestas</em></p>
-{% if page.carpentry == "swc" %}
-<p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
-<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
-<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
+{% comment %} DO NOT EDIT SURVEY LINKS {% endcomment %}
+<p><em>Surveys</em></p>
+{% if page.carpentry == "swc" %} 
+<p>Please be sure to complete these surveys before and after the workshop.</p>
+<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% elsif page.carpentry == "dc" %}
-  <p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
-<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
-<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
+  <p>Please be sure to complete these surveys before and after the workshop.</p>
+<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% elsif page.carpentry == "lc" %}
-<p>Pregunta a tu instructor por los detalles de las encuestas pre- y post-taller.</p>
+<p>Ask your instructor about pre- and post-workshop Survey details.</p>
 {% endif %}
 
 
@@ -215,18 +217,18 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endif %}
 
 {% comment %}
-  Notas colaborativas
+  Collaborative Notes
 
-  Si quiere usar un Etherpad, puede ir a
+  If you want to use an Etherpad, go to
 
       http://pad.software-carpentry.org/YYYY-MM-DD-site
 
-  donde 'YYYY-MM-DD-site' es el identificador para su taller,
-  por ejemplo: '2018-06-10-esu'.
+  where 'YYYY-MM-DD-site' is the identifier for your workshop,
+  e.g., '2015-06-10-esu'.
 {% endcomment %}
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
-  Usaremos este <a href="{{page.collaborative_notes}}">documento colaborativo</a> para conversar, tomar notas y compartir URLs y líneas de código.
+  We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
 </p>
 {% endif %}
 
@@ -444,54 +446,59 @@ and our administrator may contact you if we need any extra information.</h4>
   <h3>Text Editor</h3>
 
   <p>
-    When you're writing code, it's nice to have a text editor that is
-    optimized for writing code, with features like automatic
-    color-coding of key words.  The default text editor on macOS and
-    Linux is usually set to Vim, which is not famous for being
-    intuitive.  if you accidentally find yourself stuck in it, try
-    typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
-    exclamation mark), then hitting Return to return to the shell.
-  </p>
+	Si accidentamente te encontraste a find yourself stuck in it, prueba typing la tecla 
+escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
+    exclamation mark),
+	...
+	Cuando estás escribiendo código, es bueno tener un editor de texto que sea
+    optimizado para escribir código, con características como automático
+    código de color de las palabras clave. El editor de texto predeterminado en macOS y
+    Linux usualmente se establece en Vim, que no es famoso por ser
+    intuitivo. Si accidentalmente te encuentras atascado en él, intenta
+    escribiendo la clave de escape, seguido de <code>: q! </ code> (dos puntos, minúscula 'q',
+    signo de exclamación), luego presionando Volver para regresar al intérprete de comandos.
+</p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="editor-windows">Windows</h4>
       <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        To install it,
-        download the <a href="{{site.swc_installer}}">
+	nano es un editor básico y el predeterminado que usan los instructores en el taller.
+	Para instalarlo,
+	Descargas el<a href="{{site.swc_installer}}">
           {% if page.carpentry == "swc" %}
           Software Carpentry
           {% elsif page.carpentry == "dc" %}
           Data Carpentry
           {% elsif page.carpentry == "lc" %}
-          Library Carpentry
+          Libreria Carpentry
           {% endif %}
-          Windows installer
+          Instalador de Windowns
 	</a>
-        and double click on the file to run it.
-        <strong>This installer requires an active internet connection.</strong>
+	 y doble click en el archivo para correrlo.
+        <strong>Esta instacion requiere una coneccion de Internet activa.</strong>
       </p>
       <p>
-        Others editors that you can use are
+        Otros editores que puedes usar son
         <a href="http://notepad-plus-plus.org/">Notepad++</a> or
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
-        <strong>Be aware that you must
-          add its installation directory to your system path.</strong>
-        Please ask your instructor to help you do this.
-      </p>
+        <strong>
+	Tenga en cuenta que debe
+        agregue su directorio de instalación a la ruta del sistema. </ strong>
+        Por favor, Pídale a su instructor que lo ayude a hacer esto.
+	</p>
     </div>
     <div class="col-md-4">
       <h4 id="editor-macosx">macOS</h4>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-        for an example on how to open nano.
-        It should be pre-installed.
-      </p>
+	nano es un editor básico y el predeterminado que usan los instructores en el taller.
+        Mira la instalacion de Git <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
+       	Para un ejemplo sobre cómo abrir nano.
+        Debe estar preinstalado.
+	</p>
       <p>
-        Others editors that you can use are
+	Otros editores que puedes usar son
         <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
       </p>
@@ -499,11 +506,11 @@ and our administrator may contact you if we need any extra information.</h4>
     <div class="col-md-4">
       <h4 id="editor-linux">Linux</h4>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        It should be pre-installed.
+	nano es un editor básico y el predeterminado que usan los instructores en el taller. 
+	Para instalarlo,
       </p>
       <p>
-        Others editors that you can use are
+	Otros editores que puedes usar son
         <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
         <a href="http://kate-editor.org/">Kate</a> or
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
@@ -625,9 +632,9 @@ and our administrator may contact you if we need any extra information.</h4>
         from <a href="http://cran.r-project.org/index.html">CRAN</a>.
         Also, please install the
         <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-        Note that if you have separate user and admin accounts, you should run the
-        installers as administrator (right-click on .exe file and select "Run as
-        administrator" instead of double-clicking). Otherwise problems may occur later,
+        Note that if you have separate user and admin accounts, you should run the 
+        installers as administrator (right-click on .exe file and select "Run as 
+        administrator" instead of double-clicking). Otherwise problems may occur later, 
         for example when installing R packages.
       </p>
     </div>
