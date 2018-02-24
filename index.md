@@ -44,7 +44,9 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 {% endif %}
 
 
+
 <h4>Esta es la plantilla de taller. Elimina éstas líneas y utilíza la plantilla para personalizar tu propio sitio web. Si estás desarrollando un taller auto-gestionado o aún no hiciste una solicitud de pedido de taller, por favor completa este <a href="{{site.amy_site}}/submit">formulario</a> para notificarnos y que nuestra administradora pueda contactarte si necesitamos información adicional.</h4>
+
 
 
 <h2 id="general">General Information</h2>
@@ -166,7 +168,8 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 <hr/>
 
 {% comment %}
-  CRONOGRAMA
+  SCHEDULE
+
 
 
  Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para ajustarlos a tu planificación. Puede que quieras modificar 'Día 1' y 'Dia 2' para mostrar fechas concretas o días de la semana.
@@ -182,11 +185,11 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 <p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
 
 {% elsif page.carpentry == "dc" %}
-  <p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
-<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
-<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
+  <p>Please be sure to complete these surveys before and after the workshop.</p>
+<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% elsif page.carpentry == "lc" %}
-<p>Pregunta a tu instructor por los detalles de las encuestas pre- y post-taller.</p>
+<p>Ask your instructor about pre- and post-workshop Survey details.</p>
 {% endif %}
 
 
@@ -199,18 +202,18 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 {% endif %}
 
 {% comment %}
-  Notas colaborativas
+  Collaborative Notes
 
-  Si quiere usar un Etherpad, puede ir a
+  If you want to use an Etherpad, go to
 
       http://pad.software-carpentry.org/YYYY-MM-DD-site
 
-  donde 'YYYY-MM-DD-site' es el identificador para su taller,
-  por ejemplo: '2018-06-10-esu'.
+  where 'YYYY-MM-DD-site' is the identifier for your workshop,
+  e.g., '2015-06-10-esu'.
 {% endcomment %}
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
-  Usaremos este <a href="{{page.collaborative_notes}}">documento colaborativo</a> para conversar, tomar notas y compartir URLs y líneas de código.
+  We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
 </p>
 {% endif %}
 
@@ -424,54 +427,59 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
   <h3>Text Editor</h3>
 
   <p>
-    When you're writing code, it's nice to have a text editor that is
-    optimized for writing code, with features like automatic
-    color-coding of key words.  The default text editor on macOS and
-    Linux is usually set to Vim, which is not famous for being
-    intuitive.  if you accidentally find yourself stuck in it, try
-    typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
-    exclamation mark), then hitting Return to return to the shell.
-  </p>
+	Si accidentamente te encontraste a find yourself stuck in it, prueba typing la tecla 
+escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
+    exclamation mark),
+	...
+	Cuando estás escribiendo código, es bueno tener un editor de texto que sea
+    optimizado para escribir código, con características como automático
+    código de color de las palabras clave. El editor de texto predeterminado en macOS y
+    Linux usualmente se establece en Vim, que no es famoso por ser
+    intuitivo. Si accidentalmente te encuentras atascado en él, intenta
+    escribiendo la clave de escape, seguido de <code>: q! </ code> (dos puntos, minúscula 'q',
+    signo de exclamación), luego presionando Volver para regresar al intérprete de comandos.
+</p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="editor-windows">Windows</h4>
       <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        To install it,
-        download the <a href="{{site.swc_installer}}">
+	nano es un editor básico y el predeterminado que usan los instructores en el taller.
+	Para instalarlo,
+	Descargas el<a href="{{site.swc_installer}}">
           {% if page.carpentry == "swc" %}
           Software Carpentry
           {% elsif page.carpentry == "dc" %}
           Data Carpentry
           {% elsif page.carpentry == "lc" %}
-          Library Carpentry
+          Libreria Carpentry
           {% endif %}
-          Windows installer
+          Instalador de Windowns
 	</a>
-        and double click on the file to run it.
-        <strong>This installer requires an active internet connection.</strong>
+	 y doble click en el archivo para correrlo.
+        <strong>Esta instacion requiere una coneccion de Internet activa.</strong>
       </p>
       <p>
-        Others editors that you can use are
+        Otros editores que puedes usar son
         <a href="http://notepad-plus-plus.org/">Notepad++</a> or
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
-        <strong>Be aware that you must
-          add its installation directory to your system path.</strong>
-        Please ask your instructor to help you do this.
-      </p>
+        <strong>
+	Tenga en cuenta que debe
+        agregue su directorio de instalación a la ruta del sistema. </ strong>
+        Por favor, Pídale a su instructor que lo ayude a hacer esto.
+	</p>
     </div>
     <div class="col-md-4">
       <h4 id="editor-macosx">macOS</h4>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-        for an example on how to open nano.
-        It should be pre-installed.
-      </p>
+	nano es un editor básico y el predeterminado que usan los instructores en el taller.
+        Mira la instalacion de Git <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
+       	Para un ejemplo sobre cómo abrir nano.
+        Debe estar preinstalado.
+	</p>
       <p>
-        Others editors that you can use are
+	Otros editores que puedes usar son
         <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
       </p>
@@ -479,11 +487,11 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
     <div class="col-md-4">
       <h4 id="editor-linux">Linux</h4>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        It should be pre-installed.
+	nano es un editor básico y el predeterminado que usan los instructores en el taller. 
+	Para instalarlo,
       </p>
       <p>
-        Others editors that you can use are
+	Otros editores que puedes usar son
         <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
         <a href="http://kate-editor.org/">Kate</a> or
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
@@ -602,6 +610,7 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
       <p>
 
 
+
         Instala R descargando e instalando
         <a href="http://cran.r-project.org/bin/windows/base/release.htm">este archivo .exe </a>
         desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
@@ -611,6 +620,7 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 	debes correr los instaladores como administrador (haz click derecho en el 
         archivo .exe y selecciona "Ejecutar como administrador" en lugar de hacer doble click)  
         De lo contrario pueden ocurrir problemas, por ejemplo, cuando instales paquetes de R.
+
 
       </p>
     </div>
