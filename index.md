@@ -611,48 +611,49 @@ and our administrator may contact you if we need any extra information.</h4>
   <h3>R</h3>
 
   <p>
-    <a href="http://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
+    <a href="http://www.r-project.org">R</a> es un lenguaje de programación 
+    especialmente poderoso para exploración de datos, visualización y  
+    análisis estadístico. Para trabajar con R, usamos
     <a href="http://www.rstudio.com/">RStudio</a>.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="r-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
+      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial en inglés </a>
       <p>
-        Install R by downloading and running
-        <a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-        from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-        Note that if you have separate user and admin accounts, you should run the 
-        installers as administrator (right-click on .exe file and select "Run as 
-        administrator" instead of double-clicking). Otherwise problems may occur later, 
-        for example when installing R packages.
+        Instala R descargando e instalando
+        <a href="http://cran.r-project.org/bin/windows/base/release.htm">este archivo .exe </a>
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
+        Además, instala el entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE) 
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
+        Ten en cuenta que si tienes cuentas separadas de usuario y administrador,
+	debes correr los instaladores como administrador (haz click derecho en el 
+        archivo .exe y selecciona "Ejecutar como administrador" en lugar de hacer doble click)  
+        De lo contrario pueden ocurrir problemas, por ejemplo, cuando instales paquetes de R.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="r-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
+      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial en inglés</a>
       <p>
-        Install R by downloading and running
-        <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-        from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+        Instala R descargando e instalando
+        <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">este archivo .pkg </a>
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
+        Además, instala el entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE) 
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="r-linux">Linux</h4>
       <p>
-        You can download the binary files for your distribution
-        from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
-        you can use your package manager (e.g. for Debian/Ubuntu
-        run <code>sudo apt-get install r-base</code> and for Fedora run
-        <code>sudo dnf install R</code>).  Also, please install the
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+        Puedes descargar los archivos binarios para tu distribución
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>. O
+        puedes usar tu administrador de paquetes (por ejemplo: para Debian/Ubuntu
+        corre <code>sudo apt-get install r-base</code> y para Fedora corre
+        <code>sudo dnf install R</code>).  Además, por favor instala el entorno de desarrollo integrado, 
+	en inglés Integrated Development Environment (IDE) 
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
       </p>
     </div>
   </div>
