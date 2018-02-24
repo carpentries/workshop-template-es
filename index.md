@@ -17,24 +17,21 @@ collaborative_notes:             # optional: URL de las notas colaborativas del 
 eventbrite:           # optional: clave alfanumérica de registro en Eventbrite, por ejemplo "1234567890AB" (si se está utilizando Eventbrite)
 ---
 
-{% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
+{% comment %} Ver en los comentarios que siguen las instrucciones sobre cómo editar secciones específicas de esta plantilla de taller {% endcomment %}
 
 {% comment %}
-  HEADER
+  ENCABEZADO
 
-  Edit the values in the block above to be appropriate for your workshop.
-  If the value is not 'true', 'false', 'null', or a number, please use
-  double quotation marks around the value, unless specified otherwise.
-  And run 'make workshop-check' *before* committing to make sure that changes are good.
+  Edita los valores en el bloque de arriba para tu taller.
+  Si el valor no es 'true', 'false', 'null', o un número, por favor usa
+  comillas dobles alrededor del valor, salvo que se especifique de otro modo.
+  Por último ejecuta 'make workshop-check' *antes* de comitear para asegurarte que los cambios estan bien.
 {% endcomment %}
 
 {% comment %}
   EVENTBRITE
 
-  This block includes the Eventbrite registration widget if
-  'eventbrite' has been set in the header.  You can delete it if you
-  are not using Eventbrite, or leave it in, since it will not be
-  displayed if the 'eventbrite' field in the header is not set.
+  Este bloque incluye el widget para registro en Eventbrite, en caso de que 'eventbrite' haya sido especificado en el encabezado. Puedes borrarlo si no estás usando Eventbrite, o dejarlo, ya que no se mostrará si el campo 'eventbrite' en el encabezado no fue especificado. 
 {% endcomment %}
 {% if page.eventbrite %}
 <iframe
@@ -46,18 +43,19 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 </iframe>
 {% endif %}
 
-<h4>This is the workshop template. Delete these lines and use it to customize your own website.
-If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in
-<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
-and our administrator may contact you if we need any extra information.</h4>
+
+
+<h4>Esta es la plantilla de taller. Elimina éstas líneas y utilíza la plantilla para personalizar tu propio sitio web. Si estás desarrollando un taller auto-gestionado o aún no hiciste una solicitud de pedido de taller, por favor completa este <a href="{{site.amy_site}}/submit">formulario</a> para notificarnos y que nuestra administradora pueda contactarte si necesitamos información adicional.</h4>
+
+
 
 <h2 id="general">General Information</h2>
 
 {% comment %}
-  INTRODUCTION
+  INTRODUCCIÓN 
 
-  Edit the general explanatory paragraph below if you want to change
-  the pitch.
+  Edita el párrafo introductorio general debajo si quieres modificar la presentación.
+  
 {% endcomment %}
 {% if page.carpentry == "swc" %}
   {% include sc/intro.html %}
@@ -68,11 +66,10 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endif %}
 
 {% comment %}
-  AUDIENCE
+  PÚBLICO
 
-  Explain who your audience is.  (In particular, tell readers if the
-  workshop is only open to people from a particular institution.
-{% endcomment %}
+  Explica quién es tu público. (En particular, cuenta a los lectores si el taller esta abierto sólo a personas de una institución o grupo en particular).
+  {% endcomment %}
 {% if page.carpentry == "swc" %}
   {% include sc/who.html %}
 {% elsif page.carpentry == "dc" %}
@@ -82,48 +79,43 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endif %}
 
 {% comment %}
-  LOCATION
+  UBICACIÓN
 
-  This block displays the address and links to maps showing directions
-  if the latitude and longitude of the workshop have been set.  You
-  can use http://itouchmap.com/latlong.html to find the lat/long of an
-  address.
+  Este bloque muestra la dirección y enlaces a mapas con instrucciones para llegar, si la latitud y longitud fueron definidas. Puedes utilizar http://itouchmap.com/latlong.html para encontrar la lat/long de una dirección. 
 {% endcomment %}
 {% if page.latlng %}
 <p id="where">
-  <strong>Where:</strong>
+  <strong>Dónde:</strong>
   {{page.address}}.
-  Get directions with
+  Obtener direcciones con:
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
-  or
+  o
   <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
 </p>
 {% endif %}
 
 {% comment %}
-  DATE
+  FECHA
 
-  This block displays the date and links to Google Calendar.
+  Este bloque muestra la fecha y enlaces a Google Calendar.
 {% endcomment %}
 {% if page.humandate %}
 <p id="when">
-  <strong>When:</strong>
+  <strong>Cuándo:</strong>
   {{page.humandate}}.
   {% include workshop_calendar.html %}
 </p>
 {% endif %}
 
 {% comment %}
-  SPECIAL REQUIREMENTS
-
-  Modify the block below if there are any special requirements.
+  REQUERIMIENTOS ESPECIALES
+  
+  Modifica este bloque si hay algún requerimiento especial.
 {% endcomment %}
 <p id="requirements">
-
   <strong>Requerimientos:</strong> Las asistentes deben traer una computadora portátil con sistema operativo Mac, Linux o Windows (no tablet, Chromebook, etc.), que tenga permisos de administradora habilitados. Deben tener algunos paquetes de software específicos instalados (listados <a href="#setup">aquí</a>). 
 	
 También es requerido que respeten el 
-
   {% if page.carpentry == "swc" %}
   Software Carpentry's
   {% elsif page.carpentry == "dc" %}
@@ -132,46 +124,37 @@ También es requerido que respeten el
   Library Carpentry's
   {% endif %}
   <a href="{{site.swc_site}}/conduct.html">Código de Conducta</a>. 
-
 </p>
 
 
 {% comment %}
-  ACCESSIBILITY
+  ACCESIBILIDAD
 
-  Modify the block below if there are any barriers to accessibility or
-  special instructions.
+  Modifica este bloque si existen barreras de accesibilidad o instrucciones especiales.
 {% endcomment %}
 <p id="accessibility">
-  <strong>Accessibility:</strong> We are committed to making this workshop
-  accessible to everybody.
-  The workshop organizers have checked that:
+  <strong>Accesibilidad:</strong> Estamos comprometidas a hacer que este taller sea accesible para todas. Las organizadoras comprobaron que: 
 </p>
 <ul>
-  <li>The room is wheelchair / scooter accessible.</li>
-  <li>Accessible restrooms are available.</li>
+  <li>El salón es accesible para silla de ruedas o similar</li>
+  <li>Baños accesibles a disposición</li>
 </ul>
 <p>
-  Materials will be provided in advance of the workshop and
-  large-print handouts are available if needed by notifying the
-  organizers in advance.  If we can help making learning easier for
-  you (e.g. sign-language interpreters, lactation facilities) please
-  get in touch (using contact details below) and we will
-  attempt to provide them.
+  Los materiales se entregaran antes del taller, también se encuentra disponible material impreso si se pide a los organizadores con anticipación. Si podemos ayudar a facilitar el aprendizaje (por ejemplo, con intérpretes de lenguaje de señas, o instalaciones para lactancia) por favor contáctanos (utilizando los detalles de contacto listados debajo) e intentaremos proveerlos.
 </p>
 
 {% comment %}
-  CONTACT EMAIL ADDRESS
+  DIRECCIONES DE CORREO ELECTRÓNICO DE CONTACTO
 
-  Display the contact email address set in the configuration file.
+  Muestra los correos electrónicos de contacto definidos en el archivo de configuración.
 {% endcomment %}
 <p id="contact">
-  <strong>Contact</strong>:
-  Please email
+  <strong>Contacto</strong>:
+  Por favor escribe a
   {% if page.email %}
     {% for email in page.email %}
       {% if forloop.last and page.email.size > 1 %}
-        or
+        o
       {% else %}
         {% unless forloop.first %}
         ,
@@ -180,17 +163,20 @@ También es requerido que respeten el
       <a href='mailto:{{email}}'>{{email}}</a>
     {% endfor %}
   {% else %}
-    to-be-announced
+    a ser anunciado
   {% endif %}
-  for more information.
+  para más información.
 </p>
 
 <hr/>
 
 {% comment %}
-  CRONOGRAMA
+  SCHEDULE
 
-  Muestra el cronograma del taller. Edite los elementos y los tiempos de la tabla para que coincidan con sus planes. Quizás también quiera cambiar 'Día 1' y 'Día 2' para que coincidan con las fechas o los días de la semana.
+
+
+ Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para ajustarlos a tu planificación. Puede que quieras modificar 'Día 1' y 'Dia 2' para mostrar fechas concretas o días de la semana.
+
 {% endcomment %}
 <h2 id="schedule">Cronograma</h2>
 
@@ -200,12 +186,13 @@ También es requerido que respeten el
 <p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
 <p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
 <p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
+
 {% elsif page.carpentry == "dc" %}
-  <p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
-<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
-<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
+  <p>Please be sure to complete these surveys before and after the workshop.</p>
+<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% elsif page.carpentry == "lc" %}
-<p>Pregunta a tu instructor por los detalles de las encuestas pre- y post-taller.</p>
+<p>Ask your instructor about pre- and post-workshop Survey details.</p>
 {% endif %}
 
 
@@ -218,41 +205,41 @@ También es requerido que respeten el
 {% endif %}
 
 {% comment %}
-  Notas colaborativas
+  Collaborative Notes
 
-  Si quiere usar un Etherpad, puede ir a
+  If you want to use an Etherpad, go to
 
       http://pad.software-carpentry.org/YYYY-MM-DD-site
 
-  donde 'YYYY-MM-DD-site' es el identificador para su taller,
-  por ejemplo: '2018-06-10-esu'.
+  where 'YYYY-MM-DD-site' is the identifier for your workshop,
+  e.g., '2015-06-10-esu'.
 {% endcomment %}
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
-  Usaremos este <a href="{{page.collaborative_notes}}">documento colaborativo</a> para conversar, tomar notas y compartir URLs y líneas de código.
+  We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
 </p>
 {% endif %}
 
 <hr/>
 
 {% comment %}
-  SYLLABUS
+  CURRICULA
 
-  Show what topics will be covered.
+  En inglés, syllabus. Muestra que tópicos van a ser cubiertos.
 
-  1. If your workshop is R rather than Python, remove the comment
-     around that section and put a comment around the Python section.
-  2. Some workshops will delete SQL.
-  3. Please make sure the list of topics is synchronized with what you
-     intend to teach.
-  4. You may need to move the div's with class="col-md-6" around inside
-     the div's with class="row" to balance the multi-column layout.
+  1. Si tu taller es sobre R antes que Python, remove el comentario
+     alrededor de esa sección y pon un comentario alrededor de la sección Python.
+  2. Algunos talleres van a remover SQL.
+  3. Por favor asegúrate que la lista de tópicos está sincronizada con lo que
+     pretendes enseñar.
+  4. Podría ser que necesites mover los campos div con class="col-md-6" alrededor
+     dentro de los div con class="row" para balancear el diseño multi-columnar.
 
-  This is one of the places where people frequently make mistakes, so
-  please preview your site before committing, and make sure to run
-  'tools/check' as well.
+  Este es uno de los lugares donde la gente frecuentemente comete errores, así que
+  por favor observa la previsualización del sitio antes de comitear, y asegúrate
+  de ejecutar también 'tools/check'.
 {% endcomment %}
-<h2 id="syllabus">Syllabus</h2>
+<h2 id="syllabus">Currícula</h2>
 
 {% if page.carpentry == "swc" %}
   {% include sc/syllabus.html %}
@@ -265,15 +252,11 @@ También es requerido que respeten el
 <hr/>
 
 {% comment %}
-  SETUP
-
-  Delete irrelevant sections from the setup instructions.  Each
-  section is inside a 'div' without any classes to make the beginning
-  and end easier to find.
-
-  This is the other place where people frequently make mistakes, so
-  please preview your site before committing, and make sure to run
-  'tools/check' as well.
+  CONFIGURACIÓN
+ 
+  Borra las secciones irrelevantes de las instrucciones de configuración. Cada sección esta dentro de un 'div' que no contiene clases para que el comienzo y el final sean más fáciles de encontrar.
+  Este es otro lugar en donde las personas cometen errores de forma mas frecuente, por favor previsualiza tu sitio antes de commitear y además asegurate de ejecutar 'tools/check'.
+  
 {% endcomment %}
 
 <h2 id="setup">Setup</h2>
@@ -298,10 +281,11 @@ También es requerido que respeten el
 </p>
 
 <div id="shell"> {% comment %} Start of 'shell' section. {% endcomment %}
-  <h3>La terminal Bash</h3>
+  <h3>The Bash Shell</h3>
 
   <p>
-    Bash es una de las terminales más frecuentemente utilizadas, que te permite realizar tareas simples de forma rápida.
+    Bash is a commonly-used shell that gives you the power to do simple
+    tasks more quickly.
   </p>
 
   <div class="row">
@@ -309,127 +293,134 @@ También es requerido que respeten el
       <h4 id="shell-windows">Windows</h4>
       <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <ol>
-        <li>Descarga el <a href="https://git-for-windows.github.io/">instalador</a> de Git para Windows.</li> 
-        <li>Ejecuta el instalador y sigue los siguientes pasos:
+        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
+        <li>Run the installer and follow the steps bellow:
           <ol>
-            {% comment %} Instalación de Git 2.8.2 {% endcomment %}
-            {% comment %} Información {% endcomment %}
-            <li>Click en "Siguiente".</li>
-            {% comment %} Seleccionar Componentes{% endcomment %}
-            <li>Click en "Siguiente".</li>
-            {% comment %} Ajustar tu variable de entorno PATH {% endcomment %}
+            {% comment %} Git 2.8.2 Setup {% endcomment %}
+            {% comment %} Information {% endcomment %}
+            <li>Click on "Next".</li>
+            {% comment %} Select Components {% endcomment %}
+            <li>Click on "Next".</li>
+            {% comment %} Adjusting your PATH environment {% endcomment %}
             <li>
               <strong>
-                Dejar seleccionado "Utilizar Git desde la Línea de Comando de Windows" y click en "Siguiente".
+                Keep "Use Git from the Windows Command Prompt" selected and click on "Next".
               </strong>
-                Si olvidaste hacer esto, los programas que necesitas para el taller no funcionarán correctamente. 
-		Si esto sucede vuelve a ejecutar el instalador y selecciona la opción adecuada.
+                If you forgot to do this programs that you need for the workshop will not work properly.
+                If this happens rerun the installer and select the appropriate option.
             </li>
-            {% comment %} Eligiendo el ejecutable SSH {% endcomment %}
-            <li>Click en "Siguiente".</li>
-            {% comment %} Configurando los finales de línea {% endcomment %}
+            {% comment %} Choosing the SSH executable {% endcomment %}
+            <li>Click on "Next".</li>
+            {% comment %} Configuring the line ending conversións {% endcomment %}
             <li>
               <strong>
-                Deja seleccionado "Deshabilitar estilo Windows, confirmar estilo Unix para los finales de líneas" y click en "Siguiente".
+                Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
               </strong>
             </li>
-            {% comment %} Configurando el emulador de la terminal para ser utilizado con Git Bash {% endcomment %}
+            {% comment %} Configuring the terminal emulator to use with Git Bash {% endcomment %}
             <li>
               <strong>
-                Dejar seleccionado "Utilizar ventana de consola de Windows por defecto" y click en "Next".
+                Keep "Use Windows' default console window" selected and click on "Next".
               </strong>
             </li>
-            {% comment %} Configurando ajustes de rendimiento experimental {% endcomment %}
-            <li>Click en "Instalar".</li>
-            {% comment %} Instalando {% endcomment %}
-            {% comment %} Completando el Asistente de Instalación de Git{% endcomment %}
-            <li>Click en "Finalizar".</li>
+            {% comment %} Configuring experimental performance tweaks {% endcomment %}
+            <li>Click on "Install".</li>
+            {% comment %} Installing {% endcomment %}
+            {% comment %} Completing the Git Setup Wizard {% endcomment %}
+            <li>Click on "Finish".</li>
           </ol>
         </li>
         <li>
-          Si tu variable de entorno "HOME" no está configurada (o si no sabes qué es esto):
+          If your "HOME" environment variable is not set (or you don't know what this is):
           <ol>
-            <li>Abre una terminal (Abrir Menú Inicio y escribir <code>cmd</code> y presionar [Enter])</li>
+            <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press [Enter])</li>
             <li>
-              Estcribe la siguiente línea en la ventana de la terminal exactamente como sigue:
+              Type the following line into the command prompt window exactly as shown:
               <p><code>setx HOME "%USERPROFILE%"</code></p>
             </li>
-            <li>Presiona [Enter], deberías ver <code>SUCCESS: Specified value was saved.</code></li>
-            <li>Sal de la terminal escribiendo <code>exit</code> y presionando [Enter]</li>
+            <li>Press [Enter], you should see <code>SUCCESS: Specified value was saved.</code></li>
+            <li>Quit command prompt by typing <code>exit</code> then pressing [Enter]</li>
           </ol>
         </li>
       </ol>
-      <p>Esto instalará tanto Git y Bash en el programa Git Bash.</p>
+      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-macosx">macOS</h4>
       <p>
-        La terminal por defecto en todas las versiones de macOS es Bash, así que no es necesario instalar nada. Puedes acceder a Bash desde la Terminal (se encuentra en
+        The default shell in all versións of macOS is Bash, so no
+        need to install anything.  You access Bash from the Terminal
+        (found in
         <code>/Applications/Utilities</code>).
-        Puedes ver el <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a> de instalación de Git a modo de ejemplo de cómo abrir la Terminal. 
-	Puede que quieras mantener la Terminal en tu dock para este taller. 
+        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
+        for an example on how to open the Terminal.
+        You may want to keep
+        Terminal in your dock for this workshop.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-linux">Linux</h4>
       <p>
-        La consola por defecto es generalmente Bash, pero si tu máquina está configurada de forma distinta puedes ejecutarla abriendo una terminal y escribiendo <code>bash</code>. No hay necesidad de instalar nada.
+        The default shell is usually Bash, but if your
+        machine is set up differently you can run it by opening a
+        terminal and typing <code>bash</code>.  There is no need to
+        install anything.
       </p>
     </div>
   </div>
 </div> {% comment %} End of 'shell' section. {% endcomment %}
 
-<div id="git"> {% comment %} Start of 'Git' section. GitHub browser compatability
-           is given at https://help.github.com/articles/supported-browsers/{% endcomment %}
+<div id="git"> {% comment %} Start of 'Git' section. La compatibilidad de GitHub  
+           esta en https://help.github.com/articles/supported-browsers/{% endcomment %}
   <h3>Git</h3>
+
   <p>
-    Git is a version control system that lets you track who made changes
-    to what when and has options for easily updating a shared or public
-    version of your code
-    on <a href="https://github.com/">github.com</a>. You will need a
-    <a href="https://help.github.com/articles/supported-browsers/">supported</a>
-    web browser (current versions of Chrome, Firefox or Safari,
-    or Internet Explorer version 9 or above).
+    Git es un sistema de versión de control que permite hacer un seguimiento de
+    quien hiso que cambios, donde y cuando, tiene la opción de actualizar fácilmente
+    una versión publica o compartida de tu codigo en <a href="https://github.com/">github.com</a>.
+    Vas a neesitar un navegador web
+    <a href="https://help.github.com/articles/supported-browsers/">soportado</a>
+    (actualmente Chrome, Firefox, Safari, o Internet Explorer 9 para arriba)
   </p>
   <p>
-    You will need an account at <a href="https://github.com/">github.com</a>
-    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
-    you to create a GitHub account if you don't have one already.
-    Please consider what personal information you'd like to reveal. For
-    example, you may want to review these
-    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
-    for keeping your email address private</a> provided at GitHub.
+    Vas a necesitar una cuenta en <a href="https://github.com/">github.com</a>
+    para alguna partes de la lección de Git. Las cuentas basicas en GitHub son gratuitas.
+    Te incentivamos a crear una cuenta en GitHub si todavia no tenes una.
+    Por favor considera que información persional te gustaria hacer publica.
+    Por  ejemplo, por ahi te gustaria revisar algunas de estas
+    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instrucciones
+    para mantener tu dirección de email privada</a> escrita por GitHub.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="git-windows">Windows</h4>
       <p>
-        Git should be installed on your computer as part of your Bash
-        install (described above).
+        Git deberia estar instalado en tu computadora como parte
+        de tu instalacion de Bash (escrito mas abajo).
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-macosx">macOS</h4>
       <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>
       <p>
-        <strong>For OS X 10.9 and higher</strong>, install Git for Mac
-        by downloading and running the most recent "mavericks" installer from
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
-        After installing Git, there will not be anything in your <code>/Applications</code> folder,
-        as Git is a command line program.
-        <strong>For older versions of OS X (10.5-10.8)</strong> use the
-        most recent available installer labelled "snow-leopard"
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
+        <strong>Para OS X 10.9 y superiores</strong>, instala Git para Mac
+        ejecutando el instalador mas reciente de "mavericks", podes descargarlo
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">de esta lista</a>.
+        Después de instalar Git, no vas a ver nada en tu carpeta <code>/Applications/code> por que
+        Git es un programa de linea de comando.
+        <strong>Para versiónes mas antiguas de OS X (10.5-10.8)</strong>
+        Usa el instalador <a href="http://sourceforge.net/projects/git-osx-installer/files/"> disponible </a>
+        mas reciente de "snow-leopard".
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-linux">Linux</h4>
       <p>
-        If Git is not already available on your machine you can try to
-        install it via your distro's package manager. For Debian/Ubuntu run
-        <code>sudo apt-get install git</code> and for Fedora run
-        <code>sudo dnf install git</code>.
+        Si Git no esta ya en tu maquina podes tratar de instalarlo a través
+        de los repositorios de tu distribución. Para Debian/Ubuntu corre
+        <code>sudo apt-get install git</code> y para Fedora
+        <code>sudo dnf install git</code>
       </p>
     </div>
   </div>
@@ -439,54 +430,59 @@ También es requerido que respeten el
   <h3>Text Editor</h3>
 
   <p>
-    When you're writing code, it's nice to have a text editor that is
-    optimized for writing code, with features like automatic
-    color-coding of key words.  The default text editor on macOS and
-    Linux is usually set to Vim, which is not famous for being
-    intuitive.  if you accidentally find yourself stuck in it, try
-    typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
-    exclamation mark), then hitting Return to return to the shell.
-  </p>
+	Si accidentamente te encontraste a find yourself stuck in it, prueba typing la tecla 
+escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
+    exclamation mark),
+	...
+	Cuando estás escribiendo código, es bueno tener un editor de texto que sea
+    optimizado para escribir código, con características como automático
+    código de color de las palabras clave. El editor de texto predeterminado en macOS y
+    Linux usualmente se establece en Vim, que no es famoso por ser
+    intuitivo. Si accidentalmente te encuentras atascado en él, intenta
+    escribiendo la clave de escape, seguido de <code>: q! </ code> (dos puntos, minúscula 'q',
+    signo de exclamación), luego presionando Volver para regresar al intérprete de comandos.
+</p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="editor-windows">Windows</h4>
       <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        To install it,
-        download the <a href="{{site.swc_installer}}">
+	nano es un editor básico y el predeterminado que usan los instructores en el taller.
+	Para instalarlo,
+	Descargas el<a href="{{site.swc_installer}}">
           {% if page.carpentry == "swc" %}
           Software Carpentry
           {% elsif page.carpentry == "dc" %}
           Data Carpentry
           {% elsif page.carpentry == "lc" %}
-          Library Carpentry
+          Libreria Carpentry
           {% endif %}
-          Windows installer
+          Instalador de Windowns
 	</a>
-        and double click on the file to run it.
-        <strong>This installer requires an active internet connection.</strong>
+	 y doble click en el archivo para correrlo.
+        <strong>Esta instacion requiere una coneccion de Internet activa.</strong>
       </p>
       <p>
-        Others editors that you can use are
+        Otros editores que puedes usar son
         <a href="http://notepad-plus-plus.org/">Notepad++</a> or
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
-        <strong>Be aware that you must
-          add its installation directory to your system path.</strong>
-        Please ask your instructor to help you do this.
-      </p>
+        <strong>
+	Tenga en cuenta que debe
+        agregue su directorio de instalación a la ruta del sistema. </ strong>
+        Por favor, Pídale a su instructor que lo ayude a hacer esto.
+	</p>
     </div>
     <div class="col-md-4">
       <h4 id="editor-macosx">macOS</h4>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-        for an example on how to open nano.
-        It should be pre-installed.
-      </p>
+	nano es un editor básico y el predeterminado que usan los instructores en el taller.
+        Mira la instalacion de Git <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
+       	Para un ejemplo sobre cómo abrir nano.
+        Debe estar preinstalado.
+	</p>
       <p>
-        Others editors that you can use are
+	Otros editores que puedes usar son
         <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
       </p>
@@ -494,11 +490,11 @@ También es requerido que respeten el
     <div class="col-md-4">
       <h4 id="editor-linux">Linux</h4>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        It should be pre-installed.
+	nano es un editor básico y el predeterminado que usan los instructores en el taller. 
+	Para instalarlo,
       </p>
       <p>
-        Others editors that you can use are
+	Otros editores que puedes usar son
         <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
         <a href="http://kate-editor.org/">Kate</a> or
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
@@ -521,7 +517,6 @@ También es requerido que respeten el
   </p>
 
     <p>
-
       Independientemente de cómo elijas instalarlo,
       <strong>por favor asegúrate de instalar alguna de las versiones de Python 3</strong>
       (por ejemplo, 3.6).
@@ -535,7 +530,6 @@ También es requerido que respeten el
       <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">soportadas</a>
       (no están soportados algunos navegadores antiguos, incluyendo Internet Explorer versión 9 y
       anteriores).
-
     </p>
 
   <div class="row">
@@ -603,48 +597,54 @@ También es requerido que respeten el
   <h3>R</h3>
 
   <p>
-    <a href="http://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
+    <a href="http://www.r-project.org">R</a> es un lenguaje de programación 
+    especialmente poderoso para exploración de datos, visualización y  
+    análisis estadístico. Para trabajar con R, usamos
     <a href="http://www.rstudio.com/">RStudio</a>.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="r-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
+      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial en inglés </a>
       <p>
-        Install R by downloading and running
-        <a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-        from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-        Note that if you have separate user and admin accounts, you should run the
-        installers as administrator (right-click on .exe file and select "Run as
-        administrator" instead of double-clicking). Otherwise problems may occur later,
-        for example when installing R packages.
+
+
+
+        Instala R descargando e instalando
+        <a href="http://cran.r-project.org/bin/windows/base/release.htm">este archivo .exe </a>
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
+        Además, instala el entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE) 
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
+        Ten en cuenta que si tienes cuentas separadas de usuario y administrador,
+	debes correr los instaladores como administrador (haz click derecho en el 
+        archivo .exe y selecciona "Ejecutar como administrador" en lugar de hacer doble click)  
+        De lo contrario pueden ocurrir problemas, por ejemplo, cuando instales paquetes de R.
+
+
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="r-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
+      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial en inglés</a>
       <p>
-        Install R by downloading and running
-        <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-        from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+        Instala R descargando e instalando
+        <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">este archivo .pkg </a>
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
+        Además, instala el entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE) 
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="r-linux">Linux</h4>
       <p>
-        You can download the binary files for your distribution
-        from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
-        you can use your package manager (e.g. for Debian/Ubuntu
-        run <code>sudo apt-get install r-base</code> and for Fedora run
-        <code>sudo dnf install R</code>).  Also, please install the
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+        Puedes descargar los archivos binarios para tu distribución
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>. O
+        puedes usar tu administrador de paquetes (por ejemplo: para Debian/Ubuntu
+        corre <code>sudo apt-get install r-base</code> y para Fedora corre
+        <code>sudo dnf install R</code>).  Además, por favor instala el entorno de desarrollo integrado, 
+	en inglés Integrated Development Environment (IDE) 
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
       </p>
     </div>
   </div>
@@ -657,6 +657,12 @@ También es requerido que respeten el
     SQL is a specialized programming language used with databases.  We
     use a simple database manager called
     <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
+  </p>
+
+  <p>
+    SQL es un lenguaje de programación usado en bases de datos.
+    Nosotras en nuestras lecciones usamos
+    <a href="http://www.sqlite.org/">SQLite</a>.
   </p>
 
   <div class="row">
@@ -745,25 +751,25 @@ También es requerido que respeten el
 
 {% comment %}
 <div id="vm">
-  <h3>Virtual Machine</h3>
+  <h3>Máquina Virtual</h3>
 
   <p>
-    Some instructors prefer to have learners use a virtual machine (VM)
-    rather than install software on their own computers.  If your
-    instructors have chosen to do this, please:
+      Algunos instructores prefieren que los alumnos utilicen una máquina virtual
+      en lugar de instalar software en sus propias computadoras. Si tus
+      instructores han elegido hacer esto, por favor: 
   </p>
   <ol>
     <li>
-      Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
+      Instalar <a href="https://www.virtualbox.org/">VirtualBox</a>.
     </li>
     <li>
-      Download our <a href="{{site.swc_vm}}">VM image</a>.
-      <strong>Warning:</strong> this file is 1.7 GByte, so please
-      download it <em>before</em> coming to your workshop.
+      Descargue nuestra <a href="{{site.swc_vm}}">imagen de máquina virtual</a>.
+      <strong>Advertencia:</strong> este archivo pesa 1.7 GByte, entonces por favor
+      descárguelo <em>antes</em> de venir al taller.
     </li>
     <li>
-      Load the VM into VirtualBox by selecting "Import Appliance" and
-      loading the <code>.ova</code> file.
+      Cargue la máquina virtual en VirtualBox seleccionando "Importar dispositivo" 
+      y cargando el archivo <code>.ova</code> .
     </li>
   </ol>
 </div>
