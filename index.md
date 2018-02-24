@@ -20,12 +20,12 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
 
 {% comment %}
-  HEADER
+  ENCABEZADO
 
-  Edit the values in the block above to be appropriate for your workshop.
-  If the value is not 'true', 'false', 'null', or a number, please use
-  double quotation marks around the value, unless specified otherwise.
-  And run 'make workshop-check' *before* committing to make sure that changes are good.
+  Edita los valores en el bloque de arriba para tu taller.
+  Si el valor no es 'true', 'false', 'null', o un número, por favor usa
+  comillas dobles alrededor del valor, salvo que se especifique de otro modo.
+  Por último ejecuta 'make workshop-check' *antes* de comitear para asegurarte que los cambios estan bien.
 {% endcomment %}
 
 {% comment %}
