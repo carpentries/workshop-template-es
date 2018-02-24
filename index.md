@@ -234,23 +234,23 @@ and our administrator may contact you if we need any extra information.</h4>
 <hr/>
 
 {% comment %}
-  SYLLABUS
+  CURRICULA
 
-  Show what topics will be covered.
+  En inglés, syllabus. Muestra que tópicos van a ser cubiertos.
 
-  1. If your workshop is R rather than Python, remove the comment
-     around that section and put a comment around the Python section.
-  2. Some workshops will delete SQL.
-  3. Please make sure the list of topics is synchronized with what you
-     intend to teach.
-  4. You may need to move the div's with class="col-md-6" around inside
-     the div's with class="row" to balance the multi-column layout.
+  1. Si tu taller es sobre R antes que Python, remove el comentario
+     alrededor de esa sección y pon un comentario alrededor de la sección Python.
+  2. Algunos talleres van a remover SQL.
+  3. Por favor asegúrate que la lista de tópicos está sincronizada con lo que
+     pretendes enseñar.
+  4. Podría ser que necesites mover los campos div con class="col-md-6" alrededor
+     dentro de los div con class="row" para balancear el diseño multi-columnar.
 
-  This is one of the places where people frequently make mistakes, so
-  please preview your site before committing, and make sure to run
-  'tools/check' as well.
+  Este es uno de los lugares donde la gente frecuentemente comete errores, así que
+  por favor observa la previsualización del sitio antes de comitear, y asegúrate
+  de ejecutar también 'tools/check'.
 {% endcomment %}
-<h2 id="syllabus">Syllabus</h2>
+<h2 id="syllabus">Currícula</h2>
 
 {% if page.carpentry == "swc" %}
   {% include sc/syllabus.html %}
