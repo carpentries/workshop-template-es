@@ -1,21 +1,21 @@
 ---
-layout: workshop      # DON'T CHANGE THIS.
-carpentry: "FIXME"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
-venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "FIXME"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["FIXME"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["FIXME"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["fixme@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
----
+
+layout: workshop      # NO CAMBIAR ESTO 
+carpentry: "COMPLETAR"    # qué tipo de Carpentry (ya sea "lc", "dc" o "swc")
+venue: "COMPLETAR"        # nombre breve del espacio donde se lleva adelante el taller, sin dirección (por ejemplo, "Universidad de Buenos Aires")
+address: "COMPLETAR"      # dirección completa del espacio donde se realizará el taller (por ejemplo, "Aula 3, Av. Córdoba 1234, Buenos Aires, Argentina")
+country: "COMPLETAR"      # código ISO del país, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "COMPLETAR"     # código ISO del idioma, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_639-1)
+latlng: "COMPLETAR"       # latitud y longitud del espacio en formato decimal (por ejemplo, "41.7901128,-87.6007318" - usar http://www.latlong.net/)
+humandate: "COMPLETAR"    # fechas del taller en formato legible (por ejemplo, "Feb 17-18, 2020")
+humantime: "COMPLETAR"    # hora del taller en formato legible (por ejemplo, "9:00 am - 4:30 pm")
+startdate: COMPLETAR      # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
+enddate: COMPLETAR        # fecha de finalización del taller en formato YYYY-MM-DD, por ejemplo 2015-01-02
+instructor: ["COMPLETAR"] # lista de nombres de las instructoras separados por comas y entre corchetes, como ["Hedy Lamarr", "Ada Lovelace", "Madame Curie"]
+helper: ["COMPLETAR"]     # lista de nombres de las **helpers** separados por comas y entre corchetes, como ["Carrie Fisher", "Frances Allen", "Margaret Hamilton"]
+email: ["fixme@example.org"]    # lista de direcciones de correo electrónico de contacto con la **host** ó **lead instructor**, separadas por comas y entre corchetes, como ["ada.lovelace@ejemplo.org", "carrie.fisher@ejemplo.org", "hedy.lamarr@example.org"]
+collaborative_notes:             # optional: URL de las notas colaborativas del taller, por ejemplo un Etherpad o documento de Google Docs 
+eventbrite:           # optional: clave alfanumérica de registro en Eventbrite, por ejemplo "1234567890AB" (si se está utilizando Eventbrite)
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
 
@@ -119,10 +119,11 @@ and our administrator may contact you if we need any extra information.</h4>
   Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
-  on. They should have a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
+
+  <strong>Requerimientos:</strong> Las asistentes deben traer una computadora portátil con sistema operativo Mac, Linux o Windows (no tablet, Chromebook, etc.), que tenga permisos de administradora habilitados. Deben tener algunos paquetes de software específicos instalados (listados <a href="#setup">aquí</a>). 
+	
+También es requerido que respeten el 
+
   {% if page.carpentry == "swc" %}
   Software Carpentry's
   {% elsif page.carpentry == "dc" %}
@@ -130,8 +131,10 @@ and our administrator may contact you if we need any extra information.</h4>
   {% elsif page.carpentry == "lc" %}
   Library Carpentry's
   {% endif %}
-  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+  <a href="{{site.swc_site}}/conduct.html">Código de Conducta</a>. 
+
 </p>
+
 
 {% comment %}
   ACCESSIBILITY
@@ -504,35 +507,35 @@ and our administrator may contact you if we need any extra information.</h4>
   </div>
 </div> {% comment %} End of 'editor' section. {% endcomment %}
 
-<div id="python"> {% comment %} Start of 'Python' section. Remove the third paragraph if
-           the workshop will teach Python using something other than
-           the Jupyter notebook.
-           Details at https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility {% endcomment %}
+<div id="python"> {% comment %} Comienzo de la sección de 'Python'. Eliminar el tercer párrafo si el taller enseñará Python usando algo diferente a **Jupyter notebook**.
+           Detalles en https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility (en inglés){% endcomment %}
   <h3>Python</h3>
 
   <p>
-    <a href="http://python.org">Python</a> is a popular language for
-    research computing, and great for general-purpose programming as
-    well.  Installing all of its research packages individually can be
-    a bit difficult, so we recommend
+    <a href="http://python.org">Python</a> es un lenguaje popular para
+    investigación, y excelente para programación de propósito general.
+    Instalar todos sus paquetes de investigación individualmente puede ser
+    un poco difícil, así que recomendamos
     <a href="https://www.anaconda.com/distribution/">Anaconda</a>,
-    an all-in-one installer.
+    un instalador "todo en uno".
   </p>
 
     <p>
-      Regardless of how you choose to install it,
-      <strong>please make sure you install Python version 3.x</strong>
-      (e.g., 3.6 is fine).
+
+      Independientemente de cómo elijas instalarlo,
+      <strong>por favor asegúrate de instalar alguna de las versiones de Python 3</strong>
+      (por ejemplo, 3.6).
     </p>
 
     <p>
-      We will teach Python using the <a href="https://jupyter.org/">Jupyter notebook</a>,
-      a programming environment that runs in a web browser. For this to work you will need a reasonably
-      up-to-date browser. The current versions of the Chrome, Safari and
-      Firefox browsers are all
-      <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">supported</a>
-      (some older browsers, including Internet Explorer version 9
-      and below, are not).
+      Enseñaremos Python usando <a href="https://jupyter.org/">Jupyter notebook</a>,
+      un ambiente de programación que se ejecuta en un navegador web. Para que funcione necesitarás un
+      navegador razonablemente actualizado.
+      Las versiones actuales de los navegadores Chrome, Safari y Firefox están todas
+      <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">soportadas</a>
+      (no están soportados algunos navegadores antiguos, incluyendo Internet Explorer versión 9 y
+      anteriores).
+
     </p>
 
   <div class="row">
@@ -540,62 +543,61 @@ and our administrator may contact you if we need any extra information.</h4>
       <h4 id="python-windows">Windows</h4>
       <a href="https://www.youtube.com/watch?v=xxQ0mzZ8UvA">Video Tutorial</a>
       <ol>
-        <li>Open <a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a> with your web browser.</li>
-        <li>Download the Python 3 installer for Windows.</li>
-        <li>Install Python 3 using all of the defaults for installation <em>except</em> make sure to check <strong>Make Anaconda the default Python</strong>.</li>
+        <li>Ingresa a <a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a> con tu navegador web.</li>
+        <li>Descarga el instalador de Python 3 para Windows</li>
+        <li>Instala Python 3 usando todas las opciones por defecto, salvo la que dice <strong>Hacer Anaconda la instalación por defecto de Python</strong>, <em>asegúrate de tildarla</em></li>
       </ol>
     </div>
     <div class="col-md-4">
       <h4 id="python-macosx">macOS</h4>
       <a href="https://www.youtube.com/watch?v=TcSAln46u9U">Video Tutorial</a>
       <ol>
-        <li>Open <a href="https://www.anaconda.com/download/#macos">https://www.anaconda.com/download/#macos</a> with your web browser.</li>
-        <li>Download the Python 3 installer for OS X.</li>
-        <li>Install Python 3 using all of the defaults for installation.</li>
+        <li>Ingresa a <a href="https://www.anaconda.com/download/#macos">https://www.anaconda.com/download/#macos</a> con tu navegador web.</li>
+        <li>Descarga el instalador de Python 3 para OS X.</li>
+        <li>Instala Python 3 usando todas las opciones por defecto.</li>
       </ol>
     </div>
     <div class="col-md-4">
       <h4 id="python-linux">Linux</h4>
       <ol>
-        <li>Open <a href="https://www.anaconda.com/download/#linux">https://www.anaconda.com/download/#linux</a> with your web browser.</li>
-        <li>Download the Python 3 installer for Linux.<br>
-          (The installation requires using the shell. If you aren't
-           comfortable doing the installation yourself
-           stop here and request help at the workshop.)
+        <li>Ingresa a <a href="https://www.anaconda.com/download/#linux">https://www.anaconda.com/download/#linux</a> con tu navegador web.</li>
+        <li>Descarga el instalador de Python 3 para Linux.<br>
+          (La instalación requiere el uso de la terminal. Si no te sientes cómoda
+          haciendo la  instalación por tu cuenta, detente aquí y pide ayuda en el taller)
         </li>
         <li>
-          Open a terminal window.
+          Abre una terminal.
         </li>
         <li>
-          Type <pre>bash Anaconda3-</pre> and then press
-          tab. The name of the file you just downloaded should
-          appear. If it does not, navigate to the folder where you
-          downloaded the file, for example with:
+          Escribe <pre>bash Anaconda3-</pre> presiona tab.
+          El nombre del archivo que acabas de descargar debería aparecer
+          Si no lo hace, muévete a la carpeta donde descargaste el archivo,
+          por ejemplo:
           <pre>cd Downloads</pre>
-          Then, try again.
+          Luego, intenta nuevamente.
         </li>
         <li>
-          Press enter. You will follow the text-only prompts. To move through
-          the text, press the space key. Type <code>yes</code> and
-          press enter to approve the license. Press enter to approve the
-          default location for the files. Type <code>yes</code> and
-          press enter to prepend Anaconda to your <code>PATH</code>
-          (this makes the Anaconda distribution the default Python).
+          Presiona Enter. Deberás seguir las instrucciones en la línea de comandos.
+          Para moverte por el texto, presiona la tecla de espacio. Escribe <code>yes</code> y
+          presiona enter para aceptar la licencia. Presiona enter para aceptar la
+          ruta por defecto de los archivos. Escribe <code>yes</code> y
+          presiona enter para agregar Anaconda detrás de tu <code>PATH</code>
+          (esto hace a la distribución de Anaconda el Python por defecto en nuestro sistema).
         </li>
         <li>
-          Close the terminal window.
+          Cierra la terminal.
         </li>
       </ol>
     </div>
   </div>
 {% comment %}
   <p>
-  Once you are done installing the software listed above,
-  please go to <a href="setup/index.html">this page</a>,
-  which has instructions on how to test that everything was installed correctly.
+  Una vez que terminas de instalar los programas listados arriba,
+  por favor ve a <a href="setup/index.html">esta página</a>,
+  que tiene instrucciones sobre cómo testear que todo ha sido instalado correctamente.
   </p>
 {% endcomment %}
-</div> {% comment %} End of 'Python' section. {% endcomment %}
+</div> {% comment %} Fin de la sección 'Python'. {% endcomment %}
 
 <div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
   <h3>R</h3>
