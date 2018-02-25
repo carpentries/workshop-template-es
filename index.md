@@ -641,6 +641,10 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
   </div>
 </div> {% comment %} End of 'R' section. {% endcomment %}
 
+
+{% comment %}
+ 
+ 
 <div id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
   <h3>SQLite</h3>
 
@@ -739,6 +743,9 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
     </div>
   </div>
 </div> {% comment %} End of 'OpenRefine' section. {% endcomment %}
+
+
+{% endcomment %}
 
 {% comment %}
 <div id="vm">
