@@ -439,7 +439,7 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
     código de color de las palabras clave. El editor de texto predeterminado en macOS y
     Linux usualmente se establece en Vim, que no es famoso por ser
     intuitivo. Si accidentalmente te encuentras atascado en él, intenta
-    escribiendo la clave de escape, seguido de <code>: q! </ code> (dos puntos, minúscula 'q',
+    escribiendo la clave de escape, seguido de <code>: q! </code> (dos puntos, minúscula 'q',
     signo de exclamación), luego presionando Volver para regresar al intérprete de comandos.
 </p>
 
