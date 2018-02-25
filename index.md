@@ -407,7 +407,7 @@ También es requerido que respeten el
         <strong>Para OS X 10.9 y superiores</strong>, instala Git para Mac
         ejecutando el instalador mas reciente de "mavericks", podes descargarlo
         <a href="http://sourceforge.net/projects/git-osx-installer/files/">de esta lista</a>.
-        Después de instalar Git, no vas a ver nada en tu carpeta <code>/Applications/code> por que
+        Después de instalar Git, no vas a ver nada en tu carpeta <code>/Applications</code> por que
         Git es un programa de linea de comando.
         <strong>Para versiónes mas antiguas de OS X (10.5-10.8)</strong>
         Usa el instalador <a href="http://sourceforge.net/projects/git-osx-installer/files/"> disponible </a>
