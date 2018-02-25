@@ -469,7 +469,7 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
         <strong>
 	Tenga en cuenta que debe
-        agregue su directorio de instalación a la ruta del sistema. </ strong>
+        agregue su directorio de instalación a la ruta del sistema. </strong>
         Por favor, Pídale a su instructor que lo ayude a hacer esto.
 	</p>
     </div>
