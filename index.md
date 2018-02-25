@@ -281,11 +281,10 @@ También es requerido que respeten el
 </p>
 
 <div id="shell"> {% comment %} Start of 'shell' section. {% endcomment %}
-  <h3>The Bash Shell</h3>
+  <h3>La terminal Bash</h3>
 
   <p>
-    Bash is a commonly-used shell that gives you the power to do simple
-    tasks more quickly.
+    Bash es una de las terminales más frecuentemente utilizadas, que te permite realizar tareas simples de forma rápida.
   </p>
 
   <div class="row">
@@ -293,83 +292,75 @@ También es requerido que respeten el
       <h4 id="shell-windows">Windows</h4>
       <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <ol>
-        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
-        <li>Run the installer and follow the steps bellow:
+        <li>Descarga el <a href="https://git-for-windows.github.io/">instalador</a> de Git para Windows.</li> 
+        <li>Ejecuta el instalador y sigue los siguientes pasos:
           <ol>
-            {% comment %} Git 2.8.2 Setup {% endcomment %}
-            {% comment %} Information {% endcomment %}
-            <li>Click on "Next".</li>
-            {% comment %} Select Components {% endcomment %}
-            <li>Click on "Next".</li>
-            {% comment %} Adjusting your PATH environment {% endcomment %}
+            {% comment %} Instalación de Git 2.8.2 {% endcomment %}
+            {% comment %} Información {% endcomment %}
+            <li>Click en "Siguiente".</li>
+            {% comment %} Seleccionar Componentes{% endcomment %}
+            <li>Click en "Siguiente".</li>
+            {% comment %} Ajustar tu variable de entorno PATH {% endcomment %}
             <li>
               <strong>
-                Keep "Use Git from the Windows Command Prompt" selected and click on "Next".
+                Dejar seleccionado "Utilizar Git desde la Línea de Comando de Windows" y click en "Siguiente".
               </strong>
-                If you forgot to do this programs that you need for the workshop will not work properly.
-                If this happens rerun the installer and select the appropriate option.
+                Si olvidaste hacer esto, los programas que necesitas para el taller no funcionarán correctamente. 
+		Si esto sucede vuelve a ejecutar el instalador y selecciona la opción adecuada.
             </li>
-            {% comment %} Choosing the SSH executable {% endcomment %}
-            <li>Click on "Next".</li>
-            {% comment %} Configuring the line ending conversións {% endcomment %}
+            {% comment %} Eligiendo el ejecutable SSH {% endcomment %}
+            <li>Click en "Siguiente".</li>
+            {% comment %} Configurando los finales de línea {% endcomment %}
             <li>
               <strong>
-                Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
+                Deja seleccionado "Deshabilitar estilo Windows, confirmar estilo Unix para los finales de líneas" y click en "Siguiente".
               </strong>
             </li>
-            {% comment %} Configuring the terminal emulator to use with Git Bash {% endcomment %}
+            {% comment %} Configurando el emulador de la terminal para ser utilizado con Git Bash {% endcomment %}
             <li>
               <strong>
-                Keep "Use Windows' default console window" selected and click on "Next".
+                Dejar seleccionado "Utilizar ventana de consola de Windows por defecto" y click en "Next".
               </strong>
             </li>
-            {% comment %} Configuring experimental performance tweaks {% endcomment %}
-            <li>Click on "Install".</li>
-            {% comment %} Installing {% endcomment %}
-            {% comment %} Completing the Git Setup Wizard {% endcomment %}
-            <li>Click on "Finish".</li>
+            {% comment %} Configurando ajustes de rendimiento experimental {% endcomment %}
+            <li>Click en "Instalar".</li>
+            {% comment %} Instalando {% endcomment %}
+            {% comment %} Completando el Asistente de Instalación de Git{% endcomment %}
+            <li>Click en "Finalizar".</li>
           </ol>
         </li>
         <li>
-          If your "HOME" environment variable is not set (or you don't know what this is):
+          Si tu variable de entorno "HOME" no está configurada (o si no sabes qué es esto):
           <ol>
-            <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press [Enter])</li>
+            <li>Abre una terminal (Abrir Menú Inicio y escribir <code>cmd</code> y presionar [Enter])</li>
             <li>
-              Type the following line into the command prompt window exactly as shown:
+              Estcribe la siguiente línea en la ventana de la terminal exactamente como sigue:
               <p><code>setx HOME "%USERPROFILE%"</code></p>
             </li>
-            <li>Press [Enter], you should see <code>SUCCESS: Specified value was saved.</code></li>
-            <li>Quit command prompt by typing <code>exit</code> then pressing [Enter]</li>
+            <li>Presiona [Enter], deberías ver <code>SUCCESS: Specified value was saved.</code></li>
+            <li>Sal de la terminal escribiendo <code>exit</code> y presionando [Enter]</li>
           </ol>
         </li>
       </ol>
-      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
+      <p>Esto instalará tanto Git y Bash en el programa Git Bash.</p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-macosx">macOS</h4>
       <p>
-        The default shell in all versións of macOS is Bash, so no
-        need to install anything.  You access Bash from the Terminal
-        (found in
+        La terminal por defecto en todas las versiones de macOS es Bash, así que no es necesario instalar nada. Puedes acceder a Bash desde la Terminal (se encuentra en
         <code>/Applications/Utilities</code>).
-        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-        for an example on how to open the Terminal.
-        You may want to keep
-        Terminal in your dock for this workshop.
+        Puedes ver el <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a> de instalación de Git a modo de ejemplo de cómo abrir la Terminal. 
+	Puede que quieras mantener la Terminal en tu dock para este taller. 
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-linux">Linux</h4>
       <p>
-        The default shell is usually Bash, but if your
-        machine is set up differently you can run it by opening a
-        terminal and typing <code>bash</code>.  There is no need to
-        install anything.
+        La consola por defecto es generalmente Bash, pero si tu máquina está configurada de forma distinta puedes ejecutarla abriendo una terminal y escribiendo <code>bash</code>. No hay necesidad de instalar nada.
       </p>
     </div>
   </div>
 </div> {% comment %} End of 'shell' section. {% endcomment %}
-
 <div id="git"> {% comment %} Start of 'Git' section. La compatibilidad de GitHub  
            esta en https://help.github.com/articles/supported-browsers/{% endcomment %}
   <h3>Git</h3>
