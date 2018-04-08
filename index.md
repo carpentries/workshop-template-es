@@ -205,18 +205,18 @@ También es requerido que respeten el
 {% endif %}
 
 {% comment %}
-  Collaborative Notes
+  Notas de colaboración
 
-  If you want to use an Etherpad, go to
+  Si quieres usar un Etherpad, ve a
 
       http://pad.software-carpentry.org/YYYY-MM-DD-site
 
-  where 'YYYY-MM-DD-site' is the identifier for your workshop,
+  donde 'YYYY-MM-DD-site' es el identificador de su taller,
   e.g., '2015-06-10-esu'.
 {% endcomment %}
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
-  We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
+ Utilizaremos este <a href="{{page.collaborative_notes}}"> documento colaborativo </a> para chatear, tomar notas y compartir URL y fragmentos de código.
 </p>
 {% endif %}
 
