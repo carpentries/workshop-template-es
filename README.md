@@ -1,28 +1,26 @@
-# workshop-template
+# workshop-template-es
 
-This repository is [Software Carpentry][swc-site] and [Data Carpentry][dc-site]'s
-template for creating websites for workshops.
+Este repositorio es una plantilla para crear sitios web para los talleres de [Software Carpentry][swc-site] y [Data Carpentry][dc-site].
 
-1.  Please *do not fork this repository directly on GitHub.*
-    Instead, please use GitHub's importer following [the instructions below](#creating-a-repository)
-    to copy this `workshop-template` repository and customize it for your workshop.
+1. Por favor no hace un **fork** de este repositorio directamente en GitHub.
+    Utilice el importador de GitHub siguiendo [las instrucciones a continuación](#creating-a-repository)
+    para copiar este repositorio `workshop-template-es` y personalizarlo para su taller.
 
-2.  Please *do your work in your repository's `gh-pages` branch*,
-    since that is what is
-    [automatically published as a website by GitHub][github-project-pages].
+2. Trabaja en el **branch** `gh-pages` de tu repositorio
+    ya que eso es lo que es
+    [publicado automáticamente como un sitio web por GitHub][github-project-pages].
 
-3.  Once you are done, please also [let us know][email] the workshop URL. If this is a self-organised workshop, you should also [fill in the self-organized workshop form][self-organized-workshop-form] (if you have not already done so), so we can keep track of all workshops. We build the list of workshops on our websites from the data included in your `index.md` page. We can only do that if you [customize][customization] that page correctly *and* let us know the workshop URL.
+3. Una vez que haya terminado, por favor avisanos [por email] la URL del taller. Si se trata de un taller autoorganizado, también debe [complete el formulario de taller autoorganizado][self-organised-workshop-form], para que podamos seguir todos los talleres. Construimos la lista de talleres en nuestros sitios web a partir de los datos incluidos en su página `index.md`. Solo podemos hacer eso si [personaliza][customization] esa página correctamente *y* déjenos saber la URL del taller.
 
-If you run into problems,
-or have ideas about how to make this process simpler,
-please [get in touch](#getting-and-giving-help).
-The pages on [customizing your website][customization],
-the [FAQ][faq],
-and the [design notes][design] have more detail on what we do and why.
-And please note:
-if you are teaching Git,
-please [create a separate repository](#setting-up-a-separate-repository-for-learners)
-for your learners to practice in.
+Si tienes problemas,
+o ideas sobre cómo hacer este proceso más simple,
+por favor [ponerse en contacto](#getting-and-giving-help).
+Las páginas de [personalizar su sitio web][customization],
+el [FAQ][faq],
+y las [notas de diseño][design] tienen más detalles sobre lo que hacemos y por qué.
+Y tenga en cuenta: si estás enseñando a Git,
+por favor [cree un repositorio separado](# setting-up-a-separate-repository-for-learners)
+para que los estudiantes practiquen.
 
 ## Creating a Repository
 
