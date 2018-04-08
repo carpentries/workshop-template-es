@@ -188,11 +188,11 @@ También es requerido que respeten el
 <p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
 
 {% elsif page.carpentry == "dc" %}
-  <p>Please be sure to complete these surveys before and after the workshop.</p>
+  <p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
 <p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% elsif page.carpentry == "lc" %}
-<p>Ask your instructor about pre- and post-workshop Survey details.</p>
+<p>Pregúntele a su instructor acerca de los detalles de la encuesta antes y después del taller.</p>
 {% endif %}
 
 
@@ -275,8 +275,7 @@ También es requerido que respeten el
   In addition, you will need an up-to-date web browser.
 </p>
 <p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
+  Mantenemos una lista de problemas comunes que ocurren durante la instalación como referencia para los instructores que pueden ser útiles en la 
   <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
 
