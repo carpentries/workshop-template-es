@@ -49,7 +49,7 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 
 
 
-<h2 id="general">General Information</h2>
+<h2 id="general">Información General</h2>
 
 {% comment %}
   INTRODUCCIÓN 
@@ -175,7 +175,7 @@ También es requerido que respeten el
 
 
 
- Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para ajustarlos a tu planificación. Puede que quieras modificar 'Día 1' y 'Dia 2' para mostrar fechas concretas o días de la semana.
+ Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para ajustarlos a tu planificación. Puede que quieras modificar 'Día 1' y 'Día 2' para mostrar fechas concretas o días de la semana.
 
 {% endcomment %}
 <h2 id="schedule">Cronograma</h2>
@@ -227,7 +227,7 @@ También es requerido que respeten el
 
   En inglés, syllabus. Muestra que tópicos van a ser cubiertos.
 
-  1. Si tu taller es sobre R antes que Python, remove el comentario
+  1. Si tu taller es sobre R antes que Python, remueve el comentario
      alrededor de esa sección y pon un comentario alrededor de la sección Python.
   2. Algunos talleres van a remover SQL.
   3. Por favor asegúrate que la lista de tópicos está sincronizada con lo que
@@ -255,14 +255,14 @@ También es requerido que respeten el
   CONFIGURACIÓN
  
   Borra las secciones irrelevantes de las instrucciones de configuración. Cada sección esta dentro de un 'div' que no contiene clases para que el comienzo y el final sean más fáciles de encontrar.
-  Este es otro lugar en donde las personas cometen errores de forma mas frecuente, por favor previsualiza tu sitio antes de commitear y además asegurate de ejecutar 'tools/check'.
+  Este es otro lugar en donde las personas cometen errores de forma más frecuente, por favor previsualiza tu sitio antes de commitear y además asegurate de ejecutar 'tools/check'.
   
 {% endcomment %}
 
-<h2 id="setup">Setup</h2>
+<h2 id="setup">Configuración</h2>
 
 <p>
-  To participate in a
+  Para participar en un taller de
   {% if page.carpentry == "swc" %}
   Software Carpentry
   {% elsif page.carpentry == "dc" %}
@@ -270,9 +270,9 @@ También es requerido que respeten el
   {% elsif page.carpentry == "lc" %}
   Library Carpentry
   {% endif %}
-  workshop,
-  you will need access to the software described below.
-  In addition, you will need an up-to-date web browser.
+  ,
+  necesitarás acceso a los programas descritos abajo.
+  Además, necesitarás un navegador actualizado.
 </p>
 <p>
   Mantenemos una lista de problemas comunes que ocurren durante la instalación como referencia para los instructores que pueden ser útiles en la 
@@ -408,7 +408,7 @@ También es requerido que respeten el
       <h4 id="git-linux">Linux</h4>
       <p>
         Si Git no esta ya en tu maquina podes tratar de instalarlo a través
-        de los repositorios de tu distribución. Para Debian/Ubuntu corre
+        de los repositorios de tu distribución. Para Debian/Ubuntu ejecuta
         <code>sudo apt-get install git</code> y para Fedora
         <code>sudo dnf install git</code>
       </p>
@@ -420,7 +420,7 @@ También es requerido que respeten el
   <h3>Text Editor</h3>
 
   <p>
-	Si accidentamente te encontraste a find yourself stuck in it, prueba typing la tecla 
+	Si accidentalmente te encontraste a find yourself stuck in it, prueba typing la tecla 
 escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
     exclamation mark),
 	...
@@ -451,16 +451,16 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
           Instalador de Windowns
 	</a>
 	 y doble click en el archivo para correrlo.
-        <strong>Esta instacion requiere una coneccion de Internet activa.</strong>
+        <strong>Esta instalación requiere una conexión a Internet.</strong>
       </p>
       <p>
         Otros editores que puedes usar son
         <a href="http://notepad-plus-plus.org/">Notepad++</a> or
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
         <strong>
-	Tenga en cuenta que debe
-        agregue su directorio de instalación a la ruta del sistema. </strong>
-        Por favor, Pídale a su instructor que lo ayude a hacer esto.
+	Ten en cuenta que debes
+        agregar tu directorio de instalación a la ruta del sistema. </strong>
+        Por favor, Pídele a tu instructor que te ayude a hacer esto.
 	</p>
     </div>
     <div class="col-md-4">
@@ -468,7 +468,7 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
       <p>
 	nano es un editor básico y el predeterminado que usan los instructores en el taller.
         Mira la instalacion de Git <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-       	Para un ejemplo sobre cómo abrir nano.
+       	Para un ejemplo sobre como abrir nano.
         Debe estar preinstalado.
 	</p>
       <p>
@@ -760,12 +760,12 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
       Instalar <a href="https://www.virtualbox.org/">VirtualBox</a>.
     </li>
     <li>
-      Descargue nuestra <a href="{{site.swc_vm}}">imagen de máquina virtual</a>.
+      Descarga nuestra <a href="{{site.swc_vm}}">imagen de máquina virtual</a>.
       <strong>Advertencia:</strong> este archivo pesa 1.7 GByte, entonces por favor
-      descárguelo <em>antes</em> de venir al taller.
+      descárgalo <em>antes</em> de venir al taller.
     </li>
     <li>
-      Cargue la máquina virtual en VirtualBox seleccionando "Importar dispositivo" 
+      Carga la máquina virtual en VirtualBox seleccionando "Importar dispositivo" 
       y cargando el archivo <code>.ova</code> .
     </li>
   </ol>
