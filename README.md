@@ -31,7 +31,7 @@ para que los estudiantes practiquen.
 2.  Go to [GitHub's importer][importer].
 
 3.  Paste the url of this repo as the old repository to clone:
-    <https://github.com/swcarpentry/workshop-template>.
+    <https://github.com/carpentries-es/workshop-template-es>.
 
 4.  Select the owner for your new repository.
     (This will probably be you, but may instead be an organization you belong to.)
