@@ -271,7 +271,7 @@ También es requerido que respeten el
   Library Carpentry
   {% endif %}
   ,
-  necesitarás acceso a los programas descritos abajo.
+  necesitarás acceso a algunos de los programas descritos abajo.
   Además, necesitarás un navegador actualizado.
 </p>
 <p>
@@ -420,7 +420,7 @@ También es requerido que respeten el
   <h3>Text Editor</h3>
 
   <p>
-	Si accidentalmente te encontraste a find yourself stuck in it, prueba typing la tecla 
+	Si accidentalmente encuentras dificultades, prueba typing la tecla  
 escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
     exclamation mark),
 	...
