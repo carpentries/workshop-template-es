@@ -1,26 +1,26 @@
 # workshop-template-es
 
-Este repositorio contiene una plantilla con la cual puedes crear sitios web para los talleres de [Software Carpentry][swc-site] y [Data Carpentry][dc-site].
+Este repositorio contiene la plantilla con la cual puedes crear sitios web para los talleres de [Software Carpentry][swc-site] y [Data Carpentry][dc-site].
 
-1. Por favor no haga un **fork** de este repositorio desde GitHub directamente.
-    Utilice el importador de GitHub siguiendo [las instrucciones a continuación](#creating-a-repository)
-    para copiar este repositorio `workshop-template-es` y personalizarlo para su taller.
+1. Por favor no hagas un **fork** de este repositorio desde GitHub, directamente.
+    Utiliza el importador de GitHub siguiendo [las instrucciones](#creating-a-repository)
+    para copiar este repositorio `workshop-template-es` y, así, editarlo de acuerdo a las necesidades de tu taller.
 
-2. Trabaja en el **branch** `gh-pages` de tu repositorio
-    ya que eso es lo que es
+2. Trabaja en el **branch** `gh-pages` de tu repositorio,
+    ya que este es el contenido que será
     [publicado automáticamente como un sitio web por GitHub][github-project-pages].
 
-3. Una vez que haya terminado, por favor avisanos [por email] la URL del taller. Si se trata de un taller autoorganizado, también debe [complete el formulario de taller autoorganizado][self-organised-workshop-form], para que podamos seguir todos los talleres. Construimos la lista de talleres en nuestros sitios web a partir de los datos incluidos en su página `index.md`. Solo podemos hacer eso si [personaliza][customization] esa página correctamente *y* déjenos saber la URL del taller.
+3. Una vez que hayas terminado, por favor avísanos [por medio de un email] cual será la URL de tu taller. Si se trata de un taller auto-organizado, también debes [completar el formulario para talleres autoorganizados][self-organised-workshop-form], para que podamos seguir el desarrollo de todos los talleres. En nuestro sitio web, construimos una lista de talleres a partir de los datos que incluyas en tu página `index.md`. Solo podemos hacer eso si [editas][customization] esa página correctamente *y* nos informas sobre la URL del taller.
 
-Si tienes problemas,
-o ideas sobre cómo hacer este proceso más simple,
-por favor [ponerse en contacto](#getting-and-giving-help).
-Las páginas de [personalizar su sitio web][customization],
-el [FAQ][faq],
+Si tienes problemas
+o ideas sobre cómo hacer este proceso de una forma más simple,
+por favor [ponte en contacto](#getting-and-giving-help).
+Las páginas para [personalizar tu sitio web][customization],
+las [FAQ][faq],
 y las [notas de diseño][design] tienen más detalles sobre lo que hacemos y por qué.
-Y tenga en cuenta: si estás enseñando a Git,
-por favor [cree un repositorio separado](# setting-up-a-separate-repository-for-learners)
-para que los estudiantes practiquen.
+Y ten en cuenta: si estás enseñando sobre Git,
+por favor [crea un repositorio aparte](# setting-up-a-separate-repository-for-learners)
+para que los estudiantes puedan practicar.
 
 ## Creating a Repository
 
