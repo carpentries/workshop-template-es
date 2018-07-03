@@ -1,8 +1,8 @@
 # workshop-template-es
 
-Este repositorio es una plantilla para crear sitios web para los talleres de [Software Carpentry][swc-site] y [Data Carpentry][dc-site].
+Este repositorio contiene una plantilla con la cual puedes crear sitios web para los talleres de [Software Carpentry][swc-site] y [Data Carpentry][dc-site].
 
-1. Por favor no hace un **fork** de este repositorio directamente en GitHub.
+1. Por favor no haga un **fork** de este repositorio desde GitHub directamente.
     Utilice el importador de GitHub siguiendo [las instrucciones a continuación](#creating-a-repository)
     para copiar este repositorio `workshop-template-es` y personalizarlo para su taller.
 
