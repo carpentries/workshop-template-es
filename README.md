@@ -4,7 +4,7 @@ Este repositorio contiene la plantilla con la cual puedes crear sitios web para 
 
 1. Por favor no hagas un **fork** de este repositorio desde GitHub, directamente.
     Utiliza el importador de GitHub siguiendo [las instrucciones](#creating-a-repository)
-    para copiar este repositorio `workshop-template-es` y, así, editarlo de acuerdo a las necesidades de tu taller.
+    para copiar el repositorio `workshop-template-es` y, así, editarlo de acuerdo a las necesidades de tu taller.
 
 2. Trabaja en el **branch** `gh-pages` de tu repositorio,
     ya que este es el contenido que será
