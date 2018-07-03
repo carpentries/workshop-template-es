@@ -10,7 +10,7 @@ Este repositorio contiene la plantilla con la cual puedes crear sitios web para 
     ya que este es el contenido que será
     [publicado automáticamente como un sitio web por GitHub][github-project-pages].
 
-3. Una vez que hayas terminado, por favor avísanos [por medio de un email] cual será la URL de tu taller. Si se trata de un taller auto-organizado, también debes [completar el formulario para talleres autoorganizados][self-organised-workshop-form], para que podamos seguir el desarrollo de todos los talleres. En nuestro sitio web, construimos una lista de talleres a partir de los datos que incluyas en tu página `index.md`. Solo podemos hacer eso si [editas][customization] esa página correctamente *y* nos informas sobre la URL del taller.
+3. Una vez que hayas terminado, por favor avísanos [por medio de un email] cual será la URL de tu taller. Si se trata de un taller auto-organizado, también debes [completar el formulario para talleres autoorganizados][self-organised-workshop-form], para que podamos seguir el desarrollo de todos los talleres. En nuestro sitio web, construimos una lista de talleres a partir de los datos que incluyas en tu página `index.md`. Sólo podemos hacer eso si [editas][customization] tu página correctamente *y* nos informas sobre la URL del taller.
 
 Si tienes problemas
 o ideas sobre cómo hacer este proceso de una forma más simple,
