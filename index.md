@@ -424,7 +424,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
     Linux es usualmente Vim, el cual no es famoso por ser
     intuitivo. Si accidentalmente te encuentras atascado en él, intenta
     presionando la tecla de escape (ESC), seguido de <code> :q! </code> (dos puntos, la letra 'q' minúscula, y el
-    signo de exclamación), luego presionando Volver para regresar al intérprete de comandos.
+    signo de exclamación), luego presionando Enter para regresar al intérprete de comandos.
 </p>
 
   <div class="row">
