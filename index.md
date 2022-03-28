@@ -373,7 +373,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
   <p>
     También necesitarás una cuenta en <a href="https://github.com/">github.com</a>
     para alguna partes de la lección de Git. Las cuentas básicas en GitHub son gratuitas.
-    Te incentivamos a crear una cuenta en GitHub si todavia no tienes una.
+    Te incentivamos a crear una cuenta en GitHub si todavía no tienes una.
     Por favor considera que información personal te gustaria hacer pública.
     Puedes revisar este sitio web con algunas
     <a href="https://help.github.com/articles/keeping-your-email-address-private/">instrucciones
