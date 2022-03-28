@@ -54,7 +54,7 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 {% comment %}
   INTRODUCCIÓN 
 
-  Edita el párrafo introductorio general debajo si quieres modificar la presentación.
+  Edita el párrafo introductorio general debajo si quieres modificar la presentación. Asegúrate de modificar el texto debajo del tipo de taller que estás organizando (swc, dc o lc).
   
 {% endcomment %}
 {% if page.carpentry == "swc" %}
@@ -68,7 +68,7 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 {% comment %}
   PÚBLICO
 
-  Explica quién es tu público. (En particular, cuenta a los lectores si el taller esta abierto sólo a personas de una institución o grupo en particular).
+  Explica quién es tu público. (En particular, cuenta a los lectores si el taller esta abierto sólo a personas de una institución o grupo en particular). Asegúrate de modificar el texto debajo del tipo de taller que estás organizando (swc, dc o lc).
   {% endcomment %}
 {% if page.carpentry == "swc" %}
   {% include sc/who.html %}
@@ -81,7 +81,7 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 {% comment %}
   UBICACIÓN
 
-  Este bloque muestra la dirección y enlaces a mapas con instrucciones para llegar, si la latitud y longitud fueron definidas. Puedes utilizar http://itouchmap.com/latlong.html para encontrar la lat/long de una dirección. 
+  Este bloque muestra la dirección y enlaces a mapas con instrucciones de cómo llegar al lugar del evento si la latitud y longitud fueron definidas en el encabezadp. Puedes utilizar http://itouchmap.com/latlong.html para encontrar las coordenadas (lat/long) de una dirección. 
 {% endcomment %}
 {% if page.latlng %}
 <p id="where">
@@ -113,17 +113,16 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
   Modifica este bloque si hay algún requerimiento especial.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requerimientos:</strong> Las asistentes deben traer una computadora portátil con sistema operativo Mac, Linux o Windows (no tablet, Chromebook, etc.), que tenga permisos de administradora habilitados. Deben tener algunos paquetes de software específicos instalados (listados <a href="#setup">aquí</a>). 
+  <strong>Requerimientos:</strong> Las asistentes deben traer una computadora portátil con sistema operativo Mac, Linux o Windows (no tablets, Chromebooks, etc.), que tenga permisos de administrador habilitados. Deberán también tener los siguientes paquetes de software instalados, mira la lista <a href="#setup">aquí</a>. 
 	
-También es requerido que respeten el 
+Es un requisito de este taller que todas las personas registradas respeten el <a href="{{site.swc_site}}/conduct.html">Código de Conducta</a> de 
   {% if page.carpentry == "swc" %}
-  Software Carpentry's
+  Software Carpentry
   {% elsif page.carpentry == "dc" %}
-  Data Carpentry's
+  Data Carpentry
   {% elsif page.carpentry == "lc" %}
-  Library Carpentry's
-  {% endif %}
-  <a href="{{site.swc_site}}/conduct.html">Código de Conducta</a>. 
+  Library Carpentry
+  {% endif %}. 
 </p>
 
 
@@ -133,14 +132,14 @@ También es requerido que respeten el
   Modifica este bloque si existen barreras de accesibilidad o instrucciones especiales.
 {% endcomment %}
 <p id="accessibility">
-  <strong>Accesibilidad:</strong> Estamos comprometidas a hacer que este taller sea accesible para todas. Las organizadoras comprobaron que: 
+  <strong>Accesibilidad:</strong> Estamos comprometidas a hacer que este taller sea accesible para todas las personas registradas. Las organizadoras comprobaron que: 
 </p>
 <ul>
   <li>El salón es accesible para silla de ruedas o similar</li>
-  <li>Baños accesibles a disposición</li>
+  <li>Baños accesibles están a disposición</li>
 </ul>
 <p>
-  Los materiales se entregaran antes del taller, también se encuentra disponible material impreso si se pide a los organizadores con anticipación. Si podemos ayudar a facilitar el aprendizaje (por ejemplo, con intérpretes de lenguaje de señas, o instalaciones para lactancia) por favor contáctanos (utilizando los detalles de contacto listados debajo) e intentaremos proveerlos.
+  Los materiales se entregarán antes del taller, también se encuentra disponible material impreso si se pide a los organizadores con anticipación. Si podemos ayudar a facilitar el aprendizaje (por ejemplo, con intérpretes de lenguaje de señas, o instalaciones para lactancia), por favor contáctanos (utilizando los detalles de contacto listados debajo) e intentaremos proveerlos.
 </p>
 
 {% comment %}
@@ -183,7 +182,7 @@ También es requerido que respeten el
 {% comment %} NO EDITAR LOS ENLACES A LAS ENCUESTAS {% endcomment %}
 <p><em>Encuestas</em></p>
 {% if page.carpentry == "swc" %}
-<p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
+<p>Por favor, asegúrate de completar estas encuestas antes y después del taller.</p>
 <p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
 <p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
 
@@ -269,13 +268,12 @@ También es requerido que respeten el
   Data Carpentry
   {% elsif page.carpentry == "lc" %}
   Library Carpentry
-  {% endif %}
-  ,
-  necesitarás acceso a algunos de los programas descritos abajo.
-  Además, necesitarás un navegador actualizado.
+  {% endif %},
+  necesitarás acceso a los programas listados abajo.
+  Además, necesitarás la versión más reciente de un navegador web como Google Chrome, Mozilla Firefox, o Safari.
 </p>
 <p>
-  Mantenemos una lista de problemas comunes que ocurren durante la instalación como referencia para los instructores que pueden ser útiles en la 
+  En caso de encontrar problemas durante la instalación de los programas requeridos en este taller, puedes acceder a una lista de problemas comunes que ocurren durante la instalación. Esta referencia puede ser útil para solucionar tus problemas de instalación: 
   <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
 
@@ -366,70 +364,66 @@ También es requerido que respeten el
 
   <p>
     Git es un sistema de versión de control que permite hacer un seguimiento de
-    quien hiso que cambios, donde y cuando, tiene la opción de actualizar fácilmente
-    una versión publica o compartida de tu codigo en <a href="https://github.com/">github.com</a>.
-    Vas a neesitar un navegador web
+    quién hizo qué cambios, dónde y cuándo. Git tiene la opción de actualizar fácilmente
+    una versión pública o compartida de tu codigo a través de plataformas como <a href="https://github.com/">github.com</a>.
+    Vas a necesitar un navegador web
     <a href="https://help.github.com/articles/supported-browsers/">soportado</a>
-    (actualmente Chrome, Firefox, Safari, o Internet Explorer 9 para arriba)
+    por GitHub (actualmente incluyen Chrome, Firefox, Safari, o Internet Explorer 9 o su versión más reciente).
   </p>
   <p>
-    Vas a necesitar una cuenta en <a href="https://github.com/">github.com</a>
-    para alguna partes de la lección de Git. Las cuentas basicas en GitHub son gratuitas.
-    Te incentivamos a crear una cuenta en GitHub si todavia no tenes una.
-    Por favor considera que información persional te gustaria hacer publica.
-    Por  ejemplo, por ahi te gustaria revisar algunas de estas
+    También necesitarás una cuenta en <a href="https://github.com/">github.com</a>
+    para alguna partes de la lección de Git. Las cuentas básicas en GitHub son gratuitas.
+    Te incentivamos a crear una cuenta en GitHub si todavia no tienes una.
+    Por favor considera que información personal te gustaria hacer pública.
+    Puedes revisar este sitio web con algunas
     <a href="https://help.github.com/articles/keeping-your-email-address-private/">instrucciones
-    para mantener tu dirección de email privada</a> escrita por GitHub.
+    sobre cómo mantener tu dirección de email privada</a>.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="git-windows">Windows</h4>
       <p>
-        Git deberia estar instalado en tu computadora como parte
-        de tu instalacion de Bash (escrito mas abajo).
+        Git debería estar instalado en tu computadora como parte
+        de tu instalación de Bash (mira la sección anterior sobre cómo instalar Bash).
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-macosx">macOS</h4>
       <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>
       <p>
-        <strong>Para OS X 10.9 y superiores</strong>, instala Git para Mac
-        ejecutando el instalador mas reciente de "mavericks", podes descargarlo
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">de esta lista</a>.
-        Después de instalar Git, no vas a ver nada en tu carpeta <code>/Applications</code> por que
-        Git es un programa de linea de comando.
-        <strong>Para versiónes mas antiguas de OS X (10.5-10.8)</strong>
-        Usa el instalador <a href="http://sourceforge.net/projects/git-osx-installer/files/"> disponible </a>
-        mas reciente de "snow-leopard".
+        <strong>Para OS X versión 10.9 y superiores</strong>, instala Git para Mac
+        ejecutando el instalador más reciente de "Mavericks" que puedes descargar
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">desde aquí</a>.
+        Después de instalar Git, no vas a ver nada en tu carpeta <code>/Applications</code> porque
+        Git es un programa de línea de comando.
+        <strong>Para versiones más antiguas de OS X (10.5-10.8)</strong>,
+        usa el instalador <a href="http://sourceforge.net/projects/git-osx-installer/files/"> disponible </a>
+        más reciente para "Snow-leopard".
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-linux">Linux</h4>
       <p>
-        Si Git no esta ya en tu maquina podes tratar de instalarlo a través
+        Si Git no está aún instalado en tu máquina puedes tratar de instalarlo a través
         de los repositorios de tu distribución. Para Debian/Ubuntu ejecuta
         <code>sudo apt-get install git</code> y para Fedora
-        <code>sudo dnf install git</code>
+        <code>sudo dnf install git</code>.
       </p>
     </div>
   </div>
 </div> {% comment %} End of 'Git' section. {% endcomment %}
 
 <div id="editor"> {% comment %} Start of 'editor' section. {% endcomment %}
-  <h3>Text Editor</h3>
+  <h3>Editor de Texto</h3>
 
   <p>
-	Si accidentalmente encuentras dificultades, prueba typing la tecla  
-escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
-    exclamation mark),
-	...
-	Cuando estás escribiendo código, es bueno tener un editor de texto que sea
-    optimizado para escribir código, con características como automático
-    código de color de las palabras clave. El editor de texto predeterminado en macOS y
-    Linux usualmente se establece en Vim, que no es famoso por ser
+
+	Cuando estés escribiendo código, es bueno tener un editor de texto que esté
+    optimizado para escribir código, con características como predicción automática de código, uso de colores para resaltar palabras clave, etc. El editor de texto predeterminado en macOS y
+    Linux es usualmente Vim, el cual no es famoso por ser
     intuitivo. Si accidentalmente te encuentras atascado en él, intenta
-    escribiendo la clave de escape, seguido de <code>: q! </code> (dos puntos, minúscula 'q',
+    presionando la tecla de escape (ESC), seguido de <code> :q! </code> (dos puntos, la letra 'q' minúscula, y el
     signo de exclamación), luego presionando Volver para regresar al intérprete de comandos.
 </p>
 
@@ -438,9 +432,9 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
       <h4 id="editor-windows">Windows</h4>
       <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <p>
-	nano es un editor básico y el predeterminado que usan los instructores en el taller.
+	Nano es un editor básico y el predeterminado que usan los instructores en el taller.
 	Para instalarlo,
-	Descargas el<a href="{{site.swc_installer}}">
+	descarga el<a href="{{site.swc_installer}}">
           {% if page.carpentry == "swc" %}
           Software Carpentry
           {% elsif page.carpentry == "dc" %}
@@ -450,44 +444,43 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
           {% endif %}
           Instalador de Windowns
 	</a>
-	 y doble click en el archivo para correrlo.
+	 y haz doble click en el archivo para iniciar la instalación.
         <strong>Esta instalación requiere una conexión a Internet.</strong>
       </p>
       <p>
         Otros editores que puedes usar son
-        <a href="http://notepad-plus-plus.org/">Notepad++</a> or
+        <a href="http://notepad-plus-plus.org/">Notepad++</a> o
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
         <strong>
 	Ten en cuenta que debes
         agregar tu directorio de instalación a la ruta del sistema. </strong>
-        Por favor, Pídele a tu instructor que te ayude a hacer esto.
+        Si tienes dificultades, pídele a tu instructor que te ayude a hacer esto.
 	</p>
     </div>
     <div class="col-md-4">
       <h4 id="editor-macosx">macOS</h4>
       <p>
-	nano es un editor básico y el predeterminado que usan los instructores en el taller.
-        Mira la instalacion de Git <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-       	Para un ejemplo sobre como abrir nano.
-        Debe estar preinstalado.
+	Nano es un editor básico y el predeterminado que usan los instructores en el taller.
+        Mira este <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a> sobre la instalacion de Git y Nano.
+        Recuerda que el editor de texto deberá estar instalado en tu computadora antes del inicio del taller.
 	</p>
       <p>
 	Otros editores que puedes usar son
-        <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
+        <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> o
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="editor-linux">Linux</h4>
       <p>
-	nano es un editor básico y el predeterminado que usan los instructores en el taller. 
-	Para instalarlo,
+	Nano es un editor básico y el predeterminado que usan los instructores en el taller. 
       </p>
       <p>
 	Otros editores que puedes usar son
         <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
-        <a href="http://kate-editor.org/">Kate</a> or
+        <a href="http://kate-editor.org/">Kate</a> o
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
+        Recuerda que el editor de texto deberá estar instalado en tu computadora antes del inicio del taller.
       </p>
     </div>
   </div>
@@ -547,14 +540,14 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
         <li>Ingresa a <a href="https://www.anaconda.com/download/#linux">https://www.anaconda.com/download/#linux</a> con tu navegador web.</li>
         <li>Descarga el instalador de Python 3 para Linux.<br>
           (La instalación requiere el uso de la terminal. Si no te sientes cómoda
-          haciendo la  instalación por tu cuenta, detente aquí y pide ayuda en el taller)
+          haciendo la instalación por tu cuenta, detente aquí y pide ayuda en el taller).
         </li>
         <li>
           Abre una terminal.
         </li>
         <li>
           Escribe <pre>bash Anaconda3-</pre> presiona tab.
-          El nombre del archivo que acabas de descargar debería aparecer
+          El nombre del archivo que acabas de descargar debería aparecer.
           Si no lo hace, muévete a la carpeta donde descargaste el archivo,
           por ejemplo:
           <pre>cd Downloads</pre>
@@ -588,8 +581,7 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
 
   <p>
     <a href="http://www.r-project.org">R</a> es un lenguaje de programación 
-    especialmente poderoso para exploración de datos, visualización y  
-    análisis estadístico. Para trabajar con R, usamos
+    especialmente poderoso para exploración y visualización de datos, así como para análisis estadísticos. Para trabajar con R, usamos el programa 
     <a href="http://www.rstudio.com/">RStudio</a>.
   </p>
 
@@ -601,15 +593,14 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
 
 
 
-        Instala R descargando e instalando
+        Después de descargar 
         <a href="http://cran.r-project.org/bin/windows/base/release.htm">este archivo .exe </a>
-        desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Además, instala el entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE) 
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>, ábrelo e instala R.
+        Además, instala el entorno de desarrollo integrado (IDE por sus siglas en inglés, Integrated Development Environment): 
         <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
-        Ten en cuenta que si tienes cuentas separadas de usuario y administrador,
-	debes correr los instaladores como administrador (haz click derecho en el 
-        archivo .exe y selecciona "Ejecutar como administrador" en lugar de hacer doble click)  
-        De lo contrario pueden ocurrir problemas, por ejemplo, cuando instales paquetes de R.
+        Ten en cuenta que si tienes cuentas separadas de usuario y administrador en tu computador, deberás correr los instaladores como administrador (haz click derecho en el 
+        archivo .exe y selecciona "Ejecutar como administrador" en lugar de hacer doble click).  
+        De lo contrario pueden ocurrir problemas cuando instales paquetes de R.
 
 
       </p>
@@ -618,10 +609,10 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
       <h4 id="r-macosx">macOS</h4>
       <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial en inglés</a>
       <p>
-        Instala R descargando e instalando
+        Después de descargar 
         <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">este archivo .pkg </a>
-        desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Además, instala el entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE) 
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>, ábrelo e instala R.
+        Además, instala el entorno de desarrollo integrado (IDE por sus siglas en inglés, Integrated Development Environment): 
         <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
       </p>
     </div>
@@ -629,11 +620,10 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
       <h4 id="r-linux">Linux</h4>
       <p>
         Puedes descargar los archivos binarios para tu distribución
-        desde <a href="http://cran.r-project.org/index.html">CRAN</a>. O
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>. También 
         puedes usar tu administrador de paquetes (por ejemplo: para Debian/Ubuntu
         corre <code>sudo apt-get install r-base</code> y para Fedora corre
-        <code>sudo dnf install R</code>).  Además, por favor instala el entorno de desarrollo integrado, 
-	en inglés Integrated Development Environment (IDE) 
+        <code>sudo dnf install R</code>). Además, por favor instala el entorno de desarrollo integrado (IDE por sus siglas en inglés, Integrated Development Environment): 
         <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
       </p>
     </div>
