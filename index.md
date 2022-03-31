@@ -598,7 +598,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
         desde <a href="http://cran.r-project.org/index.html">CRAN</a>, ábrelo e instala R.
         Además, instala el entorno de desarrollo integrado (IDE por sus siglas en inglés, Integrated Development Environment): 
         <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
-        Ten en cuenta que si tienes cuentas separadas de usuario y administrador en tu computador, deberás correr los instaladores como administrador (haz click derecho en el 
+        Ten en cuenta que si tienes cuentas separadas de usuario y administrador en tu computador, deberás correr los instaladores como administrador (haz click con el botón derecho en el 
         archivo .exe y selecciona "Ejecutar como administrador" en lugar de hacer doble click).  
         De lo contrario pueden ocurrir problemas cuando instales paquetes de R.
 
