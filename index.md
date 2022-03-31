@@ -460,7 +460,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
     <div class="col-md-4">
       <h4 id="editor-macosx">macOS</h4>
       <p>
-	Nano es un editor básico y el predeterminado que usan los instructores en el taller.
+        Nano es un editor básico y el predeterminado que usan los instructores en el taller.
         Mira este <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a> sobre la instalacion de Git y Nano.
         Recuerda que el editor de texto deberá estar instalado en tu computadora antes del inicio del taller.
 	</p>
