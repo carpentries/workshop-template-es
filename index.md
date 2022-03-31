@@ -473,7 +473,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
     <div class="col-md-4">
       <h4 id="editor-linux">Linux</h4>
       <p>
-	Nano es un editor básico y el predeterminado que usan los instructores en el taller. 
+      Nano es un editor básico y el predeterminado que usan los instructores en el taller. 
       </p>
       <p>
 	Otros editores que puedes usar son
