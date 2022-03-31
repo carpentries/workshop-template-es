@@ -398,8 +398,8 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
         Después de instalar Git, no vas a ver nada en tu carpeta <code>/Applications</code> porque
         Git es un programa de línea de comando.
         <strong>Para versiones más antiguas de OS X (10.5-10.8)</strong>,
-        usa el instalador <a href="http://sourceforge.net/projects/git-osx-installer/files/"> disponible </a>
-        más reciente para "Snow-leopard".
+        usa  <a href="http://sourceforge.net/projects/git-osx-installer/files/">el instalador disponible 
+        más reciente para "Snow-leopard"</a>.
       </p>
     </div>
     <div class="col-md-4">
