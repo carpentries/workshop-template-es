@@ -113,7 +113,7 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
   Modifica este bloque si hay algún requerimiento especial.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requerimientos:</strong> Las asistentes deben traer una computadora portátil con sistema operativo Mac, Linux o Windows (no tablets, Chromebooks, etc.), que tenga permisos de administrador habilitados. Deberán también tener los siguientes paquetes de software instalados, mira la lista <a href="#setup">aquí</a>. 
+  <strong>Requerimientos:</strong> Las asistentes deben traer una computadora portátil con sistema operativo Mac, Linux o Windows (no tablets, Chromebooks, etc.), que tenga permisos de administrador habilitados. Deberán también tener los paquetes de software requeridos instalados, mira la lista <a href="#setup">aquí</a>. 
 	
 Es un requisito de este taller que todas las personas registradas respeten el <a href="{{site.swc_site}}/conduct.html">Código de Conducta</a> de 
   {% if page.carpentry == "swc" %}
