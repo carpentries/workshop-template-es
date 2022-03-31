@@ -423,8 +423,8 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
     optimizado para escribir código, con características como predicción automática de código, uso de colores para resaltar palabras clave, etc. El editor de texto predeterminado en macOS y
     Linux es usualmente Vim, el cual no es famoso por ser
     intuitivo. Si accidentalmente te encuentras atascado en él, intenta
-    presionando la tecla de escape (ESC), seguido de <code> :q! </code> (dos puntos, la letra 'q' minúscula, y el
-    signo de exclamación), luego presionando Enter para regresar al intérprete de comandos.
+    presionando la tecla de escape (<kbd>ESC</kbd>), seguido de <kbd>:</kbd>+<kbd>Q</kbd>+<kbd>!</kbd> (dos puntos, la letra 'q' minúscula, y el
+    signo de exclamación), luego presionando <kbd>Enter</kbd> para regresar al intérprete de comandos.
 </p>
 
   <div class="row">
