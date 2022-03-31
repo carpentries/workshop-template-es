@@ -81,7 +81,7 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 {% comment %}
   UBICACIÓN
 
-  Este bloque muestra la dirección y enlaces a mapas con instrucciones de cómo llegar al lugar del evento si la latitud y longitud fueron definidas en el encabezadp. Puedes utilizar http://itouchmap.com/latlong.html para encontrar las coordenadas (lat/long) de una dirección. 
+  Este bloque muestra la dirección y enlaces a mapas con instrucciones de cómo llegar al lugar del evento si la latitud y longitud fueron definidas en el encabezado. Puedes utilizar http://itouchmap.com/latlong.html para encontrar las coordenadas (lat/long) de una dirección. 
 {% endcomment %}
 {% if page.latlng %}
 <p id="where">
