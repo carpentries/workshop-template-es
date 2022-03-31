@@ -346,7 +346,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
       <p>
         La terminal por defecto en todas las versiones de macOS es Bash, así que no es necesario instalar nada. Puedes acceder a Bash desde la Terminal (se encuentra en
         <code>/Applications/Utilities</code>).
-        Puedes ver el <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a> de instalación de Git a modo de ejemplo de cómo abrir la Terminal. 
+        Puedes ver el <a href="https://www.youtube.com/watch?v=9LQhwETCdwY">video tutorial</a> de instalación de Git a modo de ejemplo de cómo abrir la Terminal. 
 	Puede que quieras mantener la Terminal en tu dock para este taller. 
       </p>
     </div>
@@ -366,9 +366,8 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
     Git es un sistema de versión de control que permite hacer un seguimiento de
     quién hizo qué cambios, dónde y cuándo. Git tiene la opción de actualizar fácilmente
     una versión pública o compartida de tu codigo a través de plataformas como <a href="https://github.com/">github.com</a>.
-    Vas a necesitar un navegador web
-    <a href="https://help.github.com/articles/supported-browsers/">soportado</a>
-    por GitHub (actualmente incluyen Chrome, Firefox, Safari, o Internet Explorer 9 o su versión más reciente).
+    Vas a necesitar un <a href="https://help.github.com/articles/supported-browsers/">navegador web soportado</a>
+    por GitHub.
   </p>
   <p>
     También necesitarás una cuenta en <a href="https://github.com/">github.com</a>
@@ -390,7 +389,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
     </div>
     <div class="col-md-4">
       <h4 id="git-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>
+      <a href="https://www.youtube.com/watch?v=9LQhwETCdwY">Video Tutorial</a>
       <p>
         <strong>Para OS X versión 10.9 y superiores</strong>, instala Git para Mac
         ejecutando <a href="http://sourceforge.net/projects/git-osx-installer/files/">el instalador más reciente de "Mavericks" que puedes descargar
@@ -398,7 +397,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
         Después de instalar Git, no vas a ver nada en tu carpeta <code>/Applications</code> porque
         Git es un programa de línea de comando.
         <strong>Para versiones más antiguas de OS X (10.5-10.8)</strong>,
-        usa  <a href="http://sourceforge.net/projects/git-osx-installer/files/">el instalador disponible 
+        usa <a href="http://sourceforge.net/projects/git-osx-installer/files/">el instalador disponible 
         más reciente para "Snow-leopard"</a>.
       </p>
     </div>
@@ -433,19 +432,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
       <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <p>
 	Nano es un editor básico y el predeterminado que usan los instructores en el taller.
-	Para instalarlo,
-	descarga el<a href="{{site.swc_installer}}">
-          {% if page.carpentry == "swc" %}
-          Software Carpentry
-          {% elsif page.carpentry == "dc" %}
-          Data Carpentry
-          {% elsif page.carpentry == "lc" %}
-          Libreria Carpentry
-          {% endif %}
-          Instalador de Windowns
-	</a>
-	 y haz doble click en el archivo para iniciar la instalación.
-        <strong>Esta instalación requiere una conexión a Internet.</strong>
+	Nano se instalará automáticamente junto con la instalación de Git.
       </p>
       <p>
         Otros editores que puedes usar son
@@ -461,7 +448,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
       <h4 id="editor-macosx">macOS</h4>
       <p>
         Nano es un editor básico y el predeterminado que usan los instructores en el taller.
-        Mira este <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a> sobre la instalacion de Git y Nano.
+        Mira este <a href="https://www.youtube.com/watch?v=9LQhwETCdwY">video tutorial sobre la instalación de Git y Nano</a>.
         Recuerda que el editor de texto deberá estar instalado en tu computadora antes del inicio del taller.
 	</p>
       <p>
@@ -756,7 +743,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
     </li>
     <li>
       Carga la máquina virtual en VirtualBox seleccionando "Importar dispositivo" 
-      y cargando el archivo <code>.ova</code> .
+      y cargando el archivo <code>.ova</code>.
     </li>
   </ol>
 </div>
