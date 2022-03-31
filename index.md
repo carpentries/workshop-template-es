@@ -419,7 +419,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
 
   <p>
 
-	Cuando estés escribiendo código, es bueno tener un editor de texto que esté
+    Cuando estés escribiendo código, es bueno tener un editor de texto que esté
     optimizado para escribir código, con características como predicción automática de código, uso de colores para resaltar palabras clave, etc. El editor de texto predeterminado en macOS y
     Linux es usualmente Vim, el cual no es famoso por ser
     intuitivo. Si accidentalmente te encuentras atascado en él, intenta
