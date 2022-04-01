@@ -45,7 +45,7 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 
 
 
-<h4>Esta es la plantilla de taller. Elimina éstas líneas y utilíza la plantilla para personalizar tu propio sitio web. Si estás desarrollando un taller auto-gestionado o aún no hiciste una solicitud de pedido de taller, por favor completa este <a href="{{site.amy_site}}/submit">formulario</a> para notificarnos y que nuestra administradora pueda contactarte si necesitamos información adicional.</h4>
+<h4>Esta es la plantilla de taller. Elimina estas líneas y utiliza la plantilla para personalizar tu propio sitio web. Si estás desarrollando un taller auto-gestionado o aún no hiciste una solicitud de pedido de taller, por favor completa este <a href="{{site.amy_site}}/submit">formulario</a> para notificarnos y que nuestra administradora pueda contactarte si necesitamos información adicional.</h4>
 
 
 
@@ -174,7 +174,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
 
 
 
- Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para ajustarlos a tu planificación. Puede que quieras modificar 'Día 1' y 'Día 2' para mostrar fechas concretas o días de la semana.
+Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para ajustarlos a tu planificación. Puede que quieras modificar 'Día 1' y 'Día 2' para mostrar fechas concretas o días de la semana.
 
 {% endcomment %}
 <h2 id="schedule">Cronograma</h2>
@@ -229,7 +229,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
   1. Si tu taller es sobre R antes que Python, remueve el comentario
      alrededor de esa sección y pon un comentario alrededor de la sección Python.
   2. Algunos talleres van a remover SQL.
-  3. Por favor asegúrate que la lista de tópicos está sincronizada con lo que
+  3. Por favor asegúrate que la lista de tópicos esté sincronizada con lo que
      pretendes enseñar.
   4. Podría ser que necesites mover los campos div con class="col-md-6" alrededor
      dentro de los div con class="row" para balancear el diseño multi-columnar.
@@ -253,7 +253,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
 {% comment %}
   CONFIGURACIÓN
  
-  Borra las secciones irrelevantes de las instrucciones de configuración. Cada sección esta dentro de un 'div' que no contiene clases para que el comienzo y el final sean más fáciles de encontrar.
+  Borra las secciones irrelevantes de las instrucciones de configuración. Cada sección está dentro de un 'div' que no contiene clases para que el comienzo y el final sean más fáciles de encontrar.
   Este es otro lugar en donde las personas cometen errores de forma más frecuente, por favor previsualiza tu sitio antes de commitear y además asegurate de ejecutar 'tools/check'.
   
 {% endcomment %}
@@ -316,7 +316,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
             {% comment %} Configurando el emulador de la terminal para ser utilizado con Git Bash {% endcomment %}
             <li>
               <strong>
-                Dejar seleccionado "Utilizar ventana de consola de Windows por defecto" y click en "Next".
+                Dejar seleccionado "Utilizar ventana de consola de Windows por defecto" y click en "Siguiente".
               </strong>
             </li>
             {% comment %} Configurando ajustes de rendimiento experimental {% endcomment %}
@@ -331,7 +331,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
           <ol>
             <li>Abre una terminal (Abrir Menú Inicio y escribir <code>cmd</code> y presionar [Enter])</li>
             <li>
-              Estcribe la siguiente línea en la ventana de la terminal exactamente como sigue:
+              Escribe la siguiente línea en la ventana de la terminal exactamente como sigue:
               <p><code>setx HOME "%USERPROFILE%"</code></p>
             </li>
             <li>Presiona [Enter], deberías ver <code>SUCCESS: Specified value was saved.</code></li>
@@ -373,9 +373,8 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
     También necesitarás una cuenta en <a href="https://github.com/">github.com</a>
     para alguna partes de la lección de Git. Las cuentas básicas en GitHub son gratuitas.
     Te incentivamos a crear una cuenta en GitHub si todavía no tienes una.
-    Por favor considera que información personal te gustaria hacer pública.
-    Puedes revisar este sitio web con algunas
-    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instrucciones
+    Por favor considera que información personal te gustaría hacer pública.
+    Puedes revisar este sitio web con <a href="https://help.github.com/articles/keeping-your-email-address-private/">instrucciones
     sobre cómo mantener tu dirección de email privada</a>.
   </p>
 
@@ -623,16 +622,10 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
  
 <div id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
   <h3>SQLite</h3>
-
+  
   <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
-  </p>
-
-  <p>
-    SQL es un lenguaje de programación usado en bases de datos.
-    Nosotras en nuestras lecciones usamos
+    SQL es un lenguaje de programación especializado usado para acceder y manejar bases de datos.
+    En nuestras lecciones usamos un administrador de bases de dato sencillo llamado 
     <a href="http://www.sqlite.org/">SQLite</a>.
   </p>
 
@@ -640,7 +633,7 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
     <div class="col-md-4">
       <h4 id="sql-windows">Windows</h4>
       <p>
-        The <a href="{{site.swc_installer}}">
+        El instalador para Windows de <a href="{{site.swc_installer}}">
           {% if page.carpentry == "swc" %}
           Software Carpentry
           {% elsif page.carpentry == "dc" %}
@@ -648,77 +641,76 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
           {% elsif page.carpentry == "lc" %}
           Library Carpentry
           {% endif %}
-          Windows Installer
 	</a>
-        installs SQLite for Windows.
-        If you used the installer to configure nano, you don't need to run it again.
+        instala SQLite para Windows.
+        Si utilizaste el instalador para configurar nano, no necesitas correrlo nuevamente.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="sql-macosx">macOS</h4>
       <p>
-        SQLite comes pre-installed on macOS.
+        SQLite viene pre-instalado en macOS.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="sql-linux">Linux</h4>
       <p>
-        SQLite comes pre-installed on Linux.
+        SQLite viene pre-instalado en Linux.
       </p>
     </div>
   </div>
 
-  <p><strong>If you installed Anaconda, it also has a copy of SQLite
-    <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
-    Instructors will provide a workaround for it if needed.</strong></p>
+  <p><strong>Si instalastes Anaconda, también tienes una copia de SQLite
+    <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">que no soporta <code>readline</code></a>.
+    Los instructores te ayudarán a resolver cualquier problema asociado con esta instalación.</strong></p>
 </div> {% comment %} End of 'SQLite' section. {% endcomment %}
 
 <div id="openrefine"> {% comment %} Start of 'OpenRefine' section. {% endcomment %}
   <h3>OpenRefine</h3>
   <p>
-    For this lesson you will need <em>OpenRefine</em> and a
-    web browser. <em>Note:</em> this is a Java program that runs on your machine (not in the cloud).
-    It runs inside a web browser, but no web connection is needed.
+    Para esta lección necesitaremos <em>OpenRefine</em> y un
+    navegador web. <em>Nota:</em> este es un programa Java que corre en tu máquina (no en la nube).
+    El programa corre en tu navegador, pero no necesitas una conexión a internet para que funcione.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="openrefine-windows">Windows</h4>
       <p>
-        Check that you have either the Firefox or the Chrome browser installed and set as your default browser.
-        <strong>OpenRefine runs in your default browser.</strong>
-        It will not run correctly in Internet Explorer.
+        Verifica que tienes Firefox o Chrome instalados en tu computador y que son utilizados como navegadores por defecto en tu máquina.
+        <strong>OpenRefine corre en tu navegador web.</strong>
+        Este programa no funcionará correctamente en Internet Explorer.
       </p>
-      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a></p>
-      <p>Create a new directory called OpenRefine.</p>
-      <p>Unzip the downloaded file into the OpenRefine directory by right-clicking and selecting "Extract ...". </p>
-      <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by clicking <code>google-refine.exe</code> (this will launch a command prompt window, but you can ignore that - just wait for OpenRefine to open in the browser).</p>
-      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
+      <p>Descarga el software desde <a href="http://openrefine.org/">http://openrefine.org/</a></p>
+      <p>Crea un nuevo directorio llamado OpenRefine.</p>
+      <p>Unzip la carpeta descargada anteriormente dentro del directorio OpenRefine haciendo click derecho y seleccionando "Extraer...". </p>
+      <p>Navega hacia el directorio OpenRefine que creaste en el paso anterior.</p>
+      <p>Inicio el instalador OpenRefine haciendo click en <code>google-refine.exe</code> (esto abrirá una ventana de línea de comandos, la cual puedes ignorar - solo espera a que OpenRefine se abra en tu navegador).</p>
+      <p>Si usas otro navegador diferente a Firefox o Chrome, o si OpenRefine no se abre automáticamente, copia y pega cualquiera de las dos direcciones web a continuación en tu navegador: <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> o <a href="http://localhost:3333">http://localhost:3333</a> para usar el programa.</p>
     </div>
     <div class="col-md-4">
       <h4 id="openrefine-mac">Mac</h4>
-      <p>Check that you have either the Firefox or the Chrome browser installed and set as your default browser. <strong>OpenRefine runs in your default browser.</strong> It may not run correctly in Safari.</p>
-      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a>.</p>
-      <p>Create a new directory called OpenRefine.</p>
-      <p>Unzip the downloaded file into the OpenRefine directory by double-clicking it.</p>
-      <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by dragging the icon into the Applications folder.</p>
-      <p>Use <code>Ctrl-click/Open ... </code> to launch it.</p>
-      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
+      <p>Verifica que tienes Firefox o Chrome instalados en tu computador y que son utilizados como navegadores por defecto en tu máquina. <strong>OpenRefine corre en tu navegador web.</strong> Este programa no funcionará correctamente en Safari.</p>
+      <p>Descarga el software desde <a href="http://openrefine.org/">http://openrefine.org/</a>.</p>
+      <p>Crea un nuevo directorio llamado OpenRefine.</p>
+      <p>Unzip la carpeta descargada anteriormente dentro del directorio OpenRefine haciendo doble click sobre la carpeta.</p>
+      <p>Navega hacia el directorio OpenRefine que creaste en el paso anterior.</p>
+      <p>Instala OpenRefine arrastrando el ícono dentro de la carpeta Applications.</p>
+      <p>Usa <code>Ctrl-click/abrir... </code> para abrir el programa.</p>
+      <p>Si usas otro navegador diferente a Firefox o Chrome, o si OpenRefine no se abre automáticamente, copia y pega cualquiera de las dos direcciones web a continuación en tu navegador: <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> o <a href="http://localhost:3333">http://localhost:3333</a> para usar el programa.</p>
     </div>
     <div class="col-md-4">
       <h4 id="openrefine-linux">Linux</h4>
-      <p>Check that you have either the Firefox or the Chrome browser installed and set as your default browser. <strong>OpenRefine runs in your default browser.</strong></p>
-      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a>.</p>
-      <p>Make a directory called OpenRefine.</p>
-      <p>Unzip the downloaded file into the OpenRefine directory.</p>
-      <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by entering <code>./refine</code> into the terminal within the OpenRefine directory.</p>
-      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
+      <p>Verifica que tienes Firefox o Chrome instalados en tu computador y que son utilizados como navegadores por defecto en tu máquina. <strong>OpenRefine corre en tu navegador web.</strong></p>
+      <p>Descarga el software desde <a href="http://openrefine.org/">http://openrefine.org/</a>.</p>
+      <p>Crea un nuevo directorio llamado OpenRefine.</p>
+      <p>Unzip la carpeta descargada anteriormente dentro del directorio OpenRefine.</p>
+      <p>Navega hacia el directorio OpenRefine que creaste en el paso anterior.</p>
+      <p>Abre OpenRefine con la siguiente línea <code>./refine</code> en la terminal meintras estás dentro del directorio OpenRefine.</p>
+      <p>Si usas otro navegador diferente a Firefox o Chrome, o si OpenRefine no se abre automáticamente, copia y pega cualquiera de las dos direcciones web a continuación en tu navegador: <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> o <a href="http://localhost:3333">http://localhost:3333</a> para usar el programa.</p>
     </div>
   </div>
-</div> {% comment %} End of 'OpenRefine' section. {% endcomment %}
+</div> {% comment %} Fin de la sección 'OpenRefine'. {% endcomment %}
 
 
 {% endcomment %}
@@ -734,11 +726,11 @@ Es un requisito de este taller que todas las personas registradas respeten el <a
   </p>
   <ol>
     <li>
-      Instalar <a href="https://www.virtualbox.org/">VirtualBox</a>.
+      Instala <a href="https://www.virtualbox.org/">VirtualBox</a>.
     </li>
     <li>
       Descarga nuestra <a href="{{site.swc_vm}}">imagen de máquina virtual</a>.
-      <strong>Advertencia:</strong> este archivo pesa 1.7 GByte, entonces por favor
+      <strong>Advertencia:</strong> este archivo pesa 1.7 GByte, así que por favor
       descárgalo <em>antes</em> de venir al taller.
     </li>
     <li>
