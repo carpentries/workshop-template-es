@@ -54,7 +54,7 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 {% comment %}
   INTRODUCCIÓN 
 
-  Edita el párrafo introductorio general debajo si quieres modificar la presentación. Asegúrate de modificar el texto debajo del tipo de taller que estás organizando (swc, dc o lc).
+Para editar el párrafo introductorio general deberás modificar el archivo <code>intro.html</code>. Este archivo lo puedes encontrar navegando a la carpeta <code>_includes</code> y luego selecciona la carpeta para el tipo de taller que estás organizando (swc, dc o lc).
   
 {% endcomment %}
 {% if page.carpentry == "swc" %}
@@ -68,7 +68,7 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 {% comment %}
   PÚBLICO
 
-  Explica quién es tu público. (En particular, cuenta a los lectores si el taller esta abierto sólo a personas de una institución o grupo en particular). Asegúrate de modificar el texto debajo del tipo de taller que estás organizando (swc, dc o lc).
+  Explica quién es tu público. (En particular, cuenta a los lectores si el taller esta abierto sólo a personas de una institución o grupo en particular). Para editar el p]ublico deberás modificar el archivo <code>who.html</code>. Este archivo lo puedes encontrar navegando a la carpeta <code>_includes</code> y luego selecciona la carpeta para el tipo de taller que estás organizando (swc, dc o lc).
   {% endcomment %}
 {% if page.carpentry == "swc" %}
   {% include sc/who.html %}
