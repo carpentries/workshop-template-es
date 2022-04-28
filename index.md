@@ -1,11 +1,11 @@
 ---
 layout: workshop      # NO CAMBIAR ESTO 
-carpentry: "COMPLETAR"    # qué tipo de Carpentry (ya sea "lc", "dc" o "swc")
 venue: "COMPLETAR"        # nombre breve del espacio donde se lleva adelante el taller, sin dirección (por ejemplo, "Universidad de Buenos Aires")
 address: "COMPLETAR"      # dirección completa del espacio donde se realizará el taller (por ejemplo, "Aula 3, Av. Córdoba 1234, Buenos Aires, Argentina")
 country: "COMPLETAR"      # código ISO del país, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "COMPLETAR"     # código ISO del idioma, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "COMPLETAR"       # latitud y longitud del espacio en formato decimal (por ejemplo, "41.7901128,-87.6007318" - usar http://www.latlong.net/)
+latitude: "COMPLETAR"       # latitud del espacio en formato decimal (por ejemplo, "41.7901128" - usar http://www.latlong.net/)
+longitude: "COMPLETAR"    # longitud del espacio en formato decimal (por ejemplo, "-87.6007318" - usar http://www.latlong.net/)
 humandate: "COMPLETAR"    # fechas del taller en formato legible (por ejemplo, "Feb 17-18, 2020")
 humantime: "COMPLETAR"    # hora del taller en formato legible (por ejemplo, "9:00 am - 4:30 pm")
 startdate: COMPLETAR      # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
@@ -57,11 +57,11 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
   Edita el párrafo introductorio general debajo si quieres modificar la presentación.
   
 {% endcomment %}
-{% if page.carpentry == "swc" %}
+{% if site.carpentry == "swc" %}
   {% include sc/intro.html %}
-{% elsif page.carpentry == "dc" %}
+{% elsif site.carpentry == "dc" %}
   {% include dc/intro.html %}
-{% elsif page.carpentry == "lc" %}
+{% elsif site.carpentry == "lc" %}
   {% include lc/intro.html %}
 {% endif %}
 
@@ -69,12 +69,12 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
   PÚBLICO
 
   Explica quién es tu público. (En particular, cuenta a los lectores si el taller esta abierto sólo a personas de una institución o grupo en particular).
-  {% endcomment %}
-{% if page.carpentry == "swc" %}
+{% endcomment %}
+{% if site.carpentry == "swc" %}
   {% include sc/who.html %}
-{% elsif page.carpentry == "dc" %}
+{% elsif site.carpentry == "dc" %}
   {% include dc/who.html %}
-{% elsif page.carpentry == "lc" %}
+{% elsif site.carpentry == "lc" %}
   {% include lc/who.html %}
 {% endif %}
 
@@ -83,7 +83,15 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 
   Este bloque muestra la dirección y enlaces a mapas con instrucciones para llegar, si la latitud y longitud fueron definidas. Puedes utilizar http://itouchmap.com/latlong.html para encontrar la lat/long de una dirección. 
 {% endcomment %}
-{% if page.latlng %}
+{% assign begin_address = page.address | slice: 0, 4 | downcase  %}
+{% if page.address == "online" %}
+{% assign online = "true_private" %}
+{% elsif begin_address contains "http" %}
+{% assign online = "true_public" %}
+{% else %}
+{% assign online = "false" %}
+{% endif %}
+{% if page.latitude and page.longitude and online == "false" %}
 <p id="where">
   <strong>Dónde:</strong>
   {{page.address}}.
@@ -91,6 +99,18 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
   o
   <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
+</p>
+{% elsif online == "true_public" %}
+<p id="where">
+  <strong>Where:</strong>
+  online at <a href="{{page.address}}">{{page.address}}</a>.
+  If you need a password or other information to access the training,
+  the instructor will pass it on to you before the workshop.
+</p>
+{% elsif online == "true_private" %}
+<p id="where">
+  <strong>Where:</strong> This training will take place online.
+  The instructors will provide you with the information you will need to connect to this meeting.
 </p>
 {% endif %}
 
@@ -116,11 +136,11 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
   <strong>Requerimientos:</strong> Las asistentes deben traer una computadora portátil con sistema operativo Mac, Linux o Windows (no tablet, Chromebook, etc.), que tenga permisos de administradora habilitados. Deben tener algunos paquetes de software específicos instalados (listados <a href="#setup">aquí</a>). 
 	
 También es requerido que respeten el 
-  {% if page.carpentry == "swc" %}
+  {% if site.carpentry == "swc" %}
   Software Carpentry's
-  {% elsif page.carpentry == "dc" %}
+  {% elsif site.carpentry == "dc" %}
   Data Carpentry's
-  {% elsif page.carpentry == "lc" %}
+  {% elsif site.carpentry == "lc" %}
   Library Carpentry's
   {% endif %}
   <a href="{{site.swc_site}}/conduct.html">Código de Conducta</a>. 
@@ -182,25 +202,17 @@ También es requerido que respeten el
 
 {% comment %} NO EDITAR LOS ENLACES A LAS ENCUESTAS {% endcomment %}
 <p><em>Encuestas</em></p>
-{% if page.carpentry == "swc" %}
+
 <p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
-<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
-<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
-
-{% elsif page.carpentry == "dc" %}
-  <p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
-<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-{% elsif page.carpentry == "lc" %}
-<p>Pregúntele a su instructor acerca de los detalles de la encuesta antes y después del taller.</p>
-{% endif %}
+<p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
+<p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
 
 
-{% if page.carpentry == "swc" %}
+{% if site.carpentry == "swc" %}
   {% include sc/schedule.html %}
-{% elsif page.carpentry == "dc" %}
+{% elsif site.carpentry == "dc" %}
   {% include dc/schedule.html %}
-{% elsif page.carpentry == "lc" %}
+{% elsif site.carpentry == "lc" %}
   {% include lc/schedule.html %}
 {% endif %}
 
@@ -241,11 +253,11 @@ También es requerido que respeten el
 {% endcomment %}
 <h2 id="syllabus">Currícula</h2>
 
-{% if page.carpentry == "swc" %}
+{% if site.carpentry == "swc" %}
   {% include sc/syllabus.html %}
-{% elsif page.carpentry == "dc" %}
+{% elsif site.carpentry == "dc" %}
   {% include dc/syllabus.html %}
-{% elsif page.carpentry == "lc" %}
+{% elsif site.carpentry == "lc" %}
   {% include lc/syllabus.html %}
 {% endif %}
 
@@ -263,11 +275,11 @@ También es requerido que respeten el
 
 <p>
   Para participar en un taller de
-  {% if page.carpentry == "swc" %}
+  {% if site.carpentry == "swc" %}
   Software Carpentry
-  {% elsif page.carpentry == "dc" %}
+  {% elsif site.carpentry == "dc" %}
   Data Carpentry
-  {% elsif page.carpentry == "lc" %}
+  {% elsif site.carpentry == "lc" %}
   Library Carpentry
   {% endif %}
   ,
@@ -441,11 +453,11 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
 	nano es un editor básico y el predeterminado que usan los instructores en el taller.
 	Para instalarlo,
 	Descargas el<a href="{{site.swc_installer}}">
-          {% if page.carpentry == "swc" %}
+          {% if site.carpentry == "swc" %}
           Software Carpentry
-          {% elsif page.carpentry == "dc" %}
+          {% elsif site.carpentry == "dc" %}
           Data Carpentry
-          {% elsif page.carpentry == "lc" %}
+          {% elsif site.carpentry == "lc" %}
           Libreria Carpentry
           {% endif %}
           Instalador de Windowns
@@ -664,11 +676,11 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
       <h4 id="sql-windows">Windows</h4>
       <p>
         The <a href="{{site.swc_installer}}">
-          {% if page.carpentry == "swc" %}
+          {% if site.carpentry == "swc" %}
           Software Carpentry
-          {% elsif page.carpentry == "dc" %}
+          {% elsif site.carpentry == "dc" %}
           Data Carpentry
-          {% elsif page.carpentry == "lc" %}
+          {% elsif site.carpentry == "lc" %}
           Library Carpentry
           {% endif %}
           Windows Installer
