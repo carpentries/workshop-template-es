@@ -1,6 +1,6 @@
 # workshop-template-es
 
-Este repositorio contiene la plantilla con la cual puedes crear sitios web para los talleres de [Software Carpentry][swc-site] y [Data Carpentry][dc-site].
+Este repositorio contiene la plantilla con la cual puedes crear sitios web para los talleres de [The Carpentries][c-site] ([Software Carpentry][swc-site], [Data Carpentry][dc-site], y [Library Carpentry][lc-site]).
 
 1. Por favor no hagas un **fork** de este repositorio desde GitHub, directamente.
     Utiliza el importador de GitHub siguiendo [las instrucciones](#creating-a-repository)
@@ -261,3 +261,5 @@ or [mail us][email].
 [rubygems]: https://rubygems.org/pages/download/
 [self-organized-workshop-form]: https://amy.software-carpentry.org/workshops/submit/
 [swc-site]: http://software-carpentry.org
+[c-site]: https://carpentries.org
+[lc-site]: https://librarycarpentry.org
