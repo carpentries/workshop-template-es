@@ -1,11 +1,11 @@
 ---
 layout: workshop      # NO CAMBIAR ESTO 
-carpentry: "COMPLETAR"    # qué tipo de Carpentry (ya sea "lc", "dc" o "swc")
 venue: "COMPLETAR"        # nombre breve del espacio donde se lleva adelante el taller, sin dirección (por ejemplo, "Universidad de Buenos Aires")
 address: "COMPLETAR"      # dirección completa del espacio donde se realizará el taller (por ejemplo, "Aula 3, Av. Córdoba 1234, Buenos Aires, Argentina")
 country: "COMPLETAR"      # código ISO del país, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "COMPLETAR"     # código ISO del idioma, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "COMPLETAR"       # latitud y longitud del espacio en formato decimal (por ejemplo, "41.7901128,-87.6007318" - usar http://www.latlong.net/)
+latitude: "COMPLETAR"       # latitud del espacio en formato decimal (por ejemplo, "41.7901128" - usar http://www.latlong.net/)
+longitude: "COMPLETAR"    # longitud del espacio en formato decimal (por ejemplo, "-87.6007318" - usar http://www.latlong.net/)
 humandate: "COMPLETAR"    # fechas del taller en formato legible (por ejemplo, "Feb 17-18, 2020")
 humantime: "COMPLETAR"    # hora del taller en formato legible (por ejemplo, "9:00 am - 4:30 pm")
 startdate: COMPLETAR      # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
@@ -57,24 +57,24 @@ eventbrite:           # optional: clave alfanumérica de registro en Eventbrite,
 Para editar el párrafo introductorio general deberás modificar el archivo <code>intro.html</code>. Este archivo lo puedes encontrar navegando a la carpeta <code>_includes</code> y luego selecciona la carpeta para el tipo de taller que estás organizando (swc, dc o lc).
   
 {% endcomment %}
-{% if page.carpentry == "swc" %}
+{% if site.carpentry == "swc" %}
   {% include sc/intro.html %}
-{% elsif page.carpentry == "dc" %}
+{% elsif site.carpentry == "dc" %}
   {% include dc/intro.html %}
-{% elsif page.carpentry == "lc" %}
+{% elsif site.carpentry == "lc" %}
   {% include lc/intro.html %}
 {% endif %}
 
 {% comment %}
   PÚBLICO
 
-  Explica quién es tu público. (En particular, cuenta a los lectores si el taller esta abierto sólo a personas de una institución o grupo en particular). Para editar el p]ublico deberás modificar el archivo <code>who.html</code>. Este archivo lo puedes encontrar navegando a la carpeta <code>_includes</code> y luego selecciona la carpeta para el tipo de taller que estás organizando (swc, dc o lc).
+  Explica quién es tu público. (En particular, cuenta a los lectores si el taller está abierto sólo a personas de una institución o grupo en particular).
   {% endcomment %}
-{% if page.carpentry == "swc" %}
+  {% if site.carpentry == "swc" %}
   {% include sc/who.html %}
-{% elsif page.carpentry == "dc" %}
+{% elsif site.carpentry == "dc" %}
   {% include dc/who.html %}
-{% elsif page.carpentry == "lc" %}
+{% elsif site.carpentry == "lc" %}
   {% include lc/who.html %}
 {% endif %}
 
@@ -83,7 +83,15 @@ Para editar el párrafo introductorio general deberás modificar el archivo <cod
 
   Este bloque muestra la dirección y enlaces a mapas con instrucciones de cómo llegar al lugar del evento si la latitud y longitud fueron definidas en el encabezado. Puedes utilizar http://itouchmap.com/latlong.html para encontrar las coordenadas (lat/long) de una dirección. 
 {% endcomment %}
-{% if page.latlng %}
+{% assign begin_address = page.address | slice: 0, 4 | downcase  %}
+{% if page.address == "online" %}
+{% assign online = "true_private" %}
+{% elsif begin_address contains "http" %}
+{% assign online = "true_public" %}
+{% else %}
+{% assign online = "false" %}
+{% endif %}
+{% if page.latitude and page.longitude and online == "false" %}
 <p id="where">
   <strong>Dónde:</strong>
   {{page.address}}.
@@ -91,6 +99,18 @@ Para editar el párrafo introductorio general deberás modificar el archivo <cod
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
   o
   <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
+</p>
+{% elsif online == "true_public" %}
+<p id="where">
+  <strong>Dónde:</strong>
+  en línea en <a href="{{page.address}}">{{page.address}}</a>.
+  Si necesitas una clave de acceso u otra información para acceder este taller,
+  esta información será compartida contigo antes del inicio del taller.
+</p>
+{% elsif online == "true_private" %}
+<p id="where">
+  <strong>Dónde:</strong> Este taller será en línea.
+  Información sobre cómo conectarse al taller será compartida antes del inicio del evento.
 </p>
 {% endif %}
 
@@ -116,15 +136,14 @@ Para editar el párrafo introductorio general deberás modificar el archivo <cod
   <strong>Requerimientos:</strong> Las asistentes deben traer una computadora portátil con sistema operativo Mac, Linux o Windows (no tablets, Chromebooks, etc.), que tenga permisos de administrador habilitados. Deberán también tener los paquetes de software requeridos instalados, mira la lista <a href="#setup">aquí</a>. 
 	
 Es un requisito de este taller que todas las personas registradas respeten el <a href="{{site.swc_site}}/conduct.html">Código de Conducta</a> de 
-  {% if page.carpentry == "swc" %}
+  {% if site.carpentry == "swc" %}
   Software Carpentry
-  {% elsif page.carpentry == "dc" %}
+  {% elsif site.carpentry == "dc" %}
   Data Carpentry
-  {% elsif page.carpentry == "lc" %}
+  {% elsif site.carpentry == "lc" %}
   Library Carpentry
   {% endif %}. 
 </p>
-
 
 {% comment %}
   ACCESIBILIDAD
@@ -181,25 +200,15 @@ Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para a
 
 {% comment %} NO EDITAR LOS ENLACES A LAS ENCUESTAS {% endcomment %}
 <p><em>Encuestas</em></p>
-{% if page.carpentry == "swc" %}
 <p>Por favor, asegúrate de completar estas encuestas antes y después del taller.</p>
-<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
-<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
+<p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
+<p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
 
-{% elsif page.carpentry == "dc" %}
-  <p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
-<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-{% elsif page.carpentry == "lc" %}
-<p>Pregúntele a su instructor acerca de los detalles de la encuesta antes y después del taller.</p>
-{% endif %}
-
-
-{% if page.carpentry == "swc" %}
+{% if site.carpentry == "swc" %}
   {% include sc/schedule.html %}
-{% elsif page.carpentry == "dc" %}
+{% elsif site.carpentry == "dc" %}
   {% include dc/schedule.html %}
-{% elsif page.carpentry == "lc" %}
+{% elsif site.carpentry == "lc" %}
   {% include lc/schedule.html %}
 {% endif %}
 
@@ -240,11 +249,11 @@ Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para a
 {% endcomment %}
 <h2 id="syllabus">Currícula</h2>
 
-{% if page.carpentry == "swc" %}
+{% if site.carpentry == "swc" %}
   {% include sc/syllabus.html %}
-{% elsif page.carpentry == "dc" %}
+{% elsif site.carpentry == "dc" %}
   {% include dc/syllabus.html %}
-{% elsif page.carpentry == "lc" %}
+{% elsif site.carpentry == "lc" %}
   {% include lc/syllabus.html %}
 {% endif %}
 
@@ -262,11 +271,11 @@ Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para a
 
 <p>
   Para participar en un taller de
-  {% if page.carpentry == "swc" %}
+  {% if site.carpentry == "swc" %}
   Software Carpentry
-  {% elsif page.carpentry == "dc" %}
+  {% elsif site.carpentry == "dc" %}
   Data Carpentry
-  {% elsif page.carpentry == "lc" %}
+  {% elsif site.carpentry == "lc" %}
   Library Carpentry
   {% endif %},
   necesitarás acceso a los programas listados abajo.
@@ -577,8 +586,6 @@ Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para a
       <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial en inglés </a>
       <p>
 
-
-
         Después de descargar 
         <a href="http://cran.r-project.org/bin/windows/base/release.htm">este archivo .exe </a>
         desde <a href="http://cran.r-project.org/index.html">CRAN</a>, ábrelo e instala R.
@@ -587,8 +594,6 @@ Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para a
         Ten en cuenta que si tienes cuentas separadas de usuario y administrador en tu computador, deberás correr los instaladores como administrador (haz click con el botón derecho en el 
         archivo .exe y selecciona "Ejecutar como administrador" en lugar de hacer doble click).  
         De lo contrario pueden ocurrir problemas cuando instales paquetes de R.
-
-
       </p>
     </div>
     <div class="col-md-4">
@@ -634,11 +639,12 @@ Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para a
       <h4 id="sql-windows">Windows</h4>
       <p>
         El instalador para Windows de <a href="{{site.swc_installer}}">
-          {% if page.carpentry == "swc" %}
+          {% if site.carpentry == "swc" %}
+
           Software Carpentry
-          {% elsif page.carpentry == "dc" %}
+          {% elsif site.carpentry == "dc" %}
           Data Carpentry
-          {% elsif page.carpentry == "lc" %}
+          {% elsif site.carpentry == "lc" %}
           Library Carpentry
           {% endif %}
 	</a>
