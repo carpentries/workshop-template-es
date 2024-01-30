@@ -1,5 +1,10 @@
 # workshop-template-es
 
+**This template for workshop websites is functional and available for use.** 
+**However, the repository is not actively maintained due to a lack of Spanish language expertise in The Carpentries Curriculum Team, 
+and some content may be outdated.**
+**Please contact us if you would like to help maintain and update this resource.**
+
 Este repositorio contiene la plantilla con la cual puedes crear sitios web para los talleres de [Software Carpentry][swc-site] y [Data Carpentry][dc-site].
 
 1. Por favor no hagas un **fork** de este repositorio desde GitHub, directamente.
